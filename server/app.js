@@ -15,6 +15,11 @@ import {inquiryInput,siteInput,resourceInput,reservationRequestInput} from '../s
 import {serviceStatus,razor,signature,settlePayment,flushNotifications,notifyBooking,authUser,escape} from './services.js';
 const app=express();app.disable('x-powered-by');app.set('trust proxy',1);
 app.use(helmet({contentSecurityPolicy:{directives:{defaultSrc:["'self'"],scriptSrc:["'self'",'https://checkout.razorpay.com','https://apis.google.com'],styleSrc:["'self'","'unsafe-inline'"],imgSrc:["'self'",'data:','https:'],fontSrc:["'self'"],connectSrc:["'self'",'https://*.razorpay.com','https://identitytoolkit.googleapis.com','https://securetoken.googleapis.com','https://firebaseinstallations.googleapis.com'],frameSrc:['https://*.razorpay.com','https://'+firebaseConfig.authDomain],upgradeInsecureRequests:process.env.NODE_ENV==='production'?[]:null}},crossOriginEmbedderPolicy:false,crossOriginOpenerPolicy:{policy:'same-origin-allow-popups'}}));
+// Website reservations now go directly to WhatsApp. Keep historical records and payment webhooks intact.
+app.use((req,res,next)=>{
+ if(/^\/api\/(?:auth|account|admin)(?:\/|$)/.test(req.path)||['/api/bookings','/api/availability','/api/reservation-estimate','/api/reservation-requests','/api/inquiries'].includes(req.path))return res.status(410).json({error:'Online accounts and booking checkout have been retired. Please contact Mithila Heritage on WhatsApp.',whatsapp:'https://wa.me/917295807999'});
+ next();
+});
 app.post('/api/payments/webhook',express.raw({type:'application/json',limit:'100kb'}),async(req,res)=>{
  if(!signature(req.body,req.get('x-razorpay-signature'),process.env.RAZORPAY_WEBHOOK_SECRET))throw problem('Invalid webhook signature.',401);
  const event=JSON.parse(req.body.toString());
