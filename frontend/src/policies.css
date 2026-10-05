@@ -1,0 +1,69 @@
+/* Editorial guest policies, with the hotel's published text kept intact. */
+.policy-page{background:var(--cream);padding-bottom:1px;color:var(--ink)}
+.policy-masthead{padding-block:30px 64px;border-bottom:1px solid var(--line)}
+.policy-breadcrumb{display:flex;align-items:center;gap:9px;font-size:11px;color:var(--muted);min-height:40px}
+.policy-breadcrumb a{color:var(--muted)}.policy-breadcrumb a:hover{color:var(--gold)}
+.policy-masthead-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;padding-top:43px}
+.policy-kicker{display:flex;align-items:center;gap:12px;font-size:9px;letter-spacing:2px;line-height:1.5;color:var(--gold);margin:0 0 22px}
+.policy-kicker>span{width:26px;height:1px;background:currentColor}
+.policy-masthead h1{font-size:clamp(54px,6vw,88px);line-height:.97;letter-spacing:-1.7px;margin:0;color:var(--ink);font-weight:400}
+.policy-masthead h1 em{color:var(--gold)}
+.policy-introduction{font-size:14px;line-height:1.9;max-width:520px;margin:26px 0 0;color:var(--muted)}
+.policy-lotus{width:170px;height:170px;color:var(--gold);opacity:.55;flex-shrink:0;margin-right:5%}
+.policy-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:72px;padding-top:60px}
+.policy-sidebar{align-self:start;position:sticky;top:28px;min-width:0}
+.policy-nav-label{display:block;color:var(--muted);font-size:9px;letter-spacing:1.8px;margin:0 0 18px}
+.policy-sidebar nav>a{display:flex;align-items:center;gap:12px;min-height:56px;padding:14px 13px;border-bottom:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.5;border-left:2px solid transparent}
+.policy-sidebar nav>a>svg{flex-shrink:0}.policy-sidebar nav>a>span{flex:1}
+.policy-sidebar nav>a.active{background:var(--paper);color:var(--gold);border-left-color:var(--gold)}
+.policy-sidebar nav>a:hover{color:var(--ink);background:var(--surface-raised)}
+.policy-sidebar nav>a.active:hover{color:var(--gold)}
+.policy-help{margin-top:42px;border:1px solid var(--line);padding:28px 22px;background:var(--paper)}
+.policy-help>svg{height:45px;width:45px;color:var(--gold);margin-bottom:12px}
+.policy-help h2{font-size:34px;line-height:1.05;font-weight:400;margin:0 0 17px;color:var(--ink)}
+.policy-help h2 em{color:var(--gold)}
+.policy-help p{font-size:12px;line-height:1.9;margin:0 0 20px;color:var(--muted)}
+.policy-help>a{display:flex;align-items:center;gap:9px;color:var(--ink);font-size:11px;min-height:42px;overflow-wrap:anywhere}
+.policy-help>a>svg{flex-shrink:0;color:var(--gold)}
+.policy-help>a:hover{color:var(--gold)}
+.policy-help .policy-contact-link{margin-top:15px;padding-top:17px;border-top:1px solid var(--line);color:var(--gold);justify-content:space-between}
+.policy-document{min-width:0}
+.policy-document-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding-bottom:30px}
+.policy-document-icon{color:var(--gold);display:block;margin-bottom:18px}
+.policy-document-header h2{font-size:38px;line-height:1.1;font-weight:400;letter-spacing:-.5px;margin:0;color:var(--ink)}
+.policy-document-header p{font-size:10px;line-height:1.8;letter-spacing:.3px;color:var(--muted);margin:14px 0 0}
+.policy-print{display:flex;align-items:center;justify-content:center;gap:9px;flex-shrink:0;min-height:44px;border:1px solid var(--line);background:transparent;color:var(--ink);padding:10px 13px;font-size:10px;border-radius:2px}
+.policy-print:hover{background:var(--surface-raised);color:var(--gold);border-color:var(--gold)}
+.policy-contents{background:var(--paper);border:1px solid var(--line);padding:24px 27px;margin-bottom:12px}
+.policy-contents>span{font-size:9px;letter-spacing:1.6px;color:var(--gold)}
+.policy-contents ol{list-style:none;margin:13px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:28px}
+.policy-contents li{min-width:0}
+.policy-contents a{display:flex;align-items:center;gap:11px;min-height:40px;color:var(--muted);font-size:11px;line-height:1.6}
+.policy-contents a>span{color:var(--gold);font-size:9px;flex-shrink:0}
+.policy-contents a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.policy-section{display:flex;gap:25px;border-bottom:1px solid var(--line);padding:33px 0;scroll-margin-top:30px}
+.policy-section-number{color:var(--gold);font-size:10px;line-height:31px;letter-spacing:1px;flex:0 0 25px}
+.policy-section h3{font-size:29px;line-height:1.15;font-weight:400;letter-spacing:-.2px;margin:0 0 14px;color:var(--ink)}
+.policy-section p{font-size:13px;line-height:1.95;color:var(--muted);margin:0;white-space:pre-line;max-width:680px;overflow-wrap:anywhere}
+.policy-reservation-help{display:flex;gap:21px;padding:30px;background:var(--paper);border:1px solid var(--line);margin-top:36px}
+.policy-reservation-help>svg{flex-shrink:0;color:var(--gold)}
+.policy-reservation-help .policy-kicker{font-size:8px;margin-bottom:13px;letter-spacing:1.4px}
+.policy-reservation-help h3{font-size:32px;font-weight:400;margin:0 0 14px;color:var(--ink)}
+.policy-reservation-help p:not(.policy-kicker){font-size:12px;line-height:1.9;margin:0 0 23px;color:var(--muted)}
+.policy-reservation-help>div>div{display:flex;flex-wrap:wrap;gap:12px}
+.policy-action{display:inline-flex;align-items:center;justify-content:space-between;gap:22px;min-height:48px;background:var(--gold);color:var(--on-accent);border:1px solid var(--gold);font-size:11px;padding:13px 17px;border-radius:2px}
+.policy-action:hover{background:var(--focus);color:var(--on-accent);border-color:var(--focus)}
+.policy-action-outline{background:transparent;color:var(--ink);border-color:var(--line)}
+.policy-action-outline:hover{color:var(--gold);background:var(--surface-raised);border-color:var(--gold)}
+.policy-document-footer{background:transparent;display:flex;align-items:center;flex-wrap:wrap;gap:15px 24px;padding:35px 0}
+.policy-document-footer>span{font-size:8px;letter-spacing:1.4px;color:var(--muted);margin-right:auto}
+.policy-document-footer>a{display:inline-flex;align-items:center;gap:9px;color:var(--gold);font-size:11px;min-height:44px}
+.policy-document-footer>a:hover{color:var(--focus)}
+.policy-return{display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:1px solid var(--line);padding-block:30px;margin-top:40px;margin-bottom:40px}
+.policy-return>span{font-family:var(--serif);color:var(--muted);font-size:25px;font-style:italic}
+.policy-return>a{display:flex;align-items:center;gap:18px;font-size:12px;color:var(--gold);min-height:44px}
+.policy-return>a:hover{color:var(--focus)}
+@media(max-width:1100px){.policy-layout{gap:40px;grid-template-columns:225px minmax(0,1fr)}.policy-contents ol{grid-template-columns:1fr}.policy-reservation-help{padding:24px}.policy-document-header h2{font-size:35px}}
+@media(max-width:800px){.policy-layout{grid-template-columns:1fr;gap:35px;padding-top:30px}.policy-sidebar{position:static}.policy-sidebar>nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.policy-nav-label{grid-column:1/-1;margin-bottom:2px}.policy-sidebar nav>a{padding:13px 12px;border:1px solid var(--line);font-size:11px;align-items:flex-start;min-height:62px;gap:8px}.policy-sidebar nav>a.active{border-color:var(--gold)}.policy-sidebar nav>a>svg:first-child{width:15px}.policy-sidebar nav>a>svg:last-child{display:none}.policy-help{display:none}.policy-contents ol{grid-template-columns:1fr 1fr}.policy-masthead{padding-bottom:40px}.policy-masthead-inner{padding-top:30px}.policy-lotus{width:120px;height:120px;margin-right:0}.policy-masthead h1{font-size:65px}.policy-section{scroll-margin-top:20px}.policy-return{margin-top:15px}}
+@media(max-width:540px){.policy-masthead{padding-top:16px}.policy-masthead-inner{position:relative;padding-top:28px}.policy-masthead h1{font-size:54px;letter-spacing:-1px}.policy-lotus{position:absolute;right:-6px;top:2px;width:72px;height:72px;opacity:.25;pointer-events:none}.policy-kicker{font-size:8px;letter-spacing:1.7px}.policy-introduction{font-size:12px;line-height:1.9;max-width:330px}.policy-sidebar nav>a{display:flex;flex-direction:column;gap:8px;padding:12px 9px;font-size:10px;min-height:91px}.policy-document-header h2{font-size:32px}.policy-document-header{gap:12px;align-items:flex-start}.policy-document-header p{font-size:9px}.policy-print{width:44px;padding:10px;gap:0}.policy-print span{display:none}.policy-contents{padding:22px}.policy-contents ol{grid-template-columns:1fr;margin-top:12px}.policy-contents a{min-height:39px;font-size:11px}.policy-section{gap:14px;padding-block:28px}.policy-section-number{flex-basis:18px;font-size:9px;line-height:27px}.policy-section h3{font-size:26px}.policy-section p{font-size:12px;line-height:1.95}.policy-reservation-help{padding:23px 20px;gap:12px}.policy-reservation-help>svg{display:none}.policy-reservation-help h3{font-size:30px}.policy-reservation-help>div>div{flex-direction:column}.policy-action{width:100%;min-height:48px}.policy-document-footer{gap:8px 20px}.policy-document-footer>span{flex-basis:100%;margin-bottom:4px}.policy-document-footer>a{font-size:10px}.policy-return{align-items:flex-start;flex-direction:column;gap:8px;margin-bottom:25px}.policy-return>span{font-size:24px}.policy-return>a{font-size:11px}}
+@media print{body:has(.policy-page){background:#fff!important;color:#111!important}body:has(.policy-page)>#root>header,body:has(.policy-page)>#root>footer,body:has(.policy-page) .motion-control,body:has(.policy-page) .header,body:has(.policy-page) footer:not(.policy-document-footer),body:has(.policy-page) .policy-sidebar,body:has(.policy-page) .policy-print,body:has(.policy-page) .policy-breadcrumb,body:has(.policy-page) .policy-lotus,body:has(.policy-page) .policy-contents,body:has(.policy-page) .policy-return,body:has(.policy-page) .policy-reservation-help,body:has(.policy-page) .policy-document-footer{display:none!important}.policy-page{background:#fff!important}.policy-page .container{width:100%}.policy-masthead{padding:0 0 20px}.policy-masthead-inner{padding:0}.policy-masthead h1{font-size:40px;color:#111!important}.policy-masthead em,.policy-page h2,.policy-page h3,.policy-page p,.policy-kicker,.policy-section-number{color:#111!important}.policy-layout{display:block;padding-top:25px}.policy-document-header{padding-bottom:10px}.policy-document-header h2{font-size:28px}.policy-section{break-inside:avoid;padding:18px 0;border-color:#bbb}.policy-section h3{font-size:23px}.policy-section p{font-size:11px;line-height:1.6}.policy-document-icon{display:none}.policy-page a{text-decoration:none}}

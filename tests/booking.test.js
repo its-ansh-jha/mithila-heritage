@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {interval,selectResources,price,overlaps,occupied} from '../server/booking.js';
+import {signature} from '../server/services.js';
+import {createHmac} from 'node:crypto';
+import {initialSite} from '../shared/catalog.js';
+const settings={...initialSite,taxPercent:5};
+const now=new Date('2026-01-01T00:00:00Z');
+const input={kind:'room',date:'2026-02-01',endDate:'2026-02-03',roomType:'heritage-classic',guests:2,quantity:1};
+const resources=[{id:'a',active:true,kind:'room',room_type:'heritage-classic',capacity:2,rate:0},{id:'t1',active:true,kind:'table',capacity:2,rate:5},{id:'t2',active:true,kind:'table',capacity:4,rate:8}];
+test('nightly room occupancy uses Indian check-in and checkout times',()=>{const r=interval(input,settings,now);assert.equal(r.units,2);assert.equal(r.start.toISOString(),'2026-02-01T06:30:00.000Z');assert.equal(r.end.toISOString(),'2026-02-03T05:30:00.000Z');});
+test('invalid dates, reversed stays, past dates, and subminimum durations fail',()=>{for(const v of [{...input,date:'2026-02-30'},{...input,endDate:'2026-01-31'},{...input,date:'2025-12-01'},{kind:'table',date:'2026-02-01',time:'15:00',duration:29,guests:2}])assert.throws(()=>interval(v,settings,now));});
+test('overlap excludes touching boundaries and includes midnight crossing',()=>{assert.equal(overlaps({starts_at:'2026-02-01T22:00Z',ends_at:'2026-02-02T01:00Z'},{starts_at:'2026-02-02T01:00Z',ends_at:'2026-02-02T02:00Z'}),false);assert.equal(overlaps({starts_at:'2026-02-01T22:00Z',ends_at:'2026-02-02T01:00Z'},{starts_at:'2026-02-02T00:00Z',ends_at:'2026-02-02T02:00Z'}),true);});
+test('historical property reservations still protect occupied rooms',()=>{assert.throws(()=>selectResources(input,resources,[{kind:'property',resource_ids:[]}]),/reserved/);});
+test('occupied room cannot be selected a second time',()=>{assert.throws(()=>selectResources(input,resources,[{kind:'room',resource_ids:['a']}]),/No matching/);assert.equal(selectResources(input,resources,[])[0].id,'a');});
+test('room quantity and combined occupancy are enforced',()=>{assert.throws(()=>selectResources({...input,guests:3},resources,[]));assert.throws(()=>selectResources({...input,quantity:2},resources,[]));});
+test('price is computed from server rates in paise including tax',()=>{const p=price(input,settings,[],2);assert.equal(p.subtotal,540000);assert.equal(p.tax,27000);assert.equal(p.total,567000);for(const kind of ['table','property','banquet'])assert.throws(()=>price({...input,kind},settings,[],30));});
+test('expired holds release inventory but cancellation requests do not',()=>{assert.equal(occupied({status:'hold',expires_at:'2025-12-01'},now),false);assert.equal(occupied({status:'hold',expires_at:'2026-02-01'},now),true);assert.equal(occupied({status:'cancel_requested'},now),true);assert.equal(occupied({status:'reconciliation'},now),false);});
+test('payment signatures reject tampering and malformed input',()=>{const value='order_x|pay_x';const sig=createHmac('sha256','secret').update(value).digest('hex');assert.equal(signature(value,sig,'secret'),true);assert.equal(signature(value+'x',sig,'secret'),false);assert.equal(signature(value,'not-hex','secret'),false);assert.equal(signature(value,sig,undefined),false);});
+
+test('new reservations accept only the four published room categories',()=>{for(const kind of ['table','property','villa','banquet'])assert.throws(()=>interval({...input,kind},settings,now));assert.throws(()=>interval({...input,roomType:'presidential-suite'},settings,now));for(const r of initialSite.rooms)assert.equal(interval({...input,roomType:r.id},settings,now).input.roomType,r.id);});

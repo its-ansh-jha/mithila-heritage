@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/((?!images/|assets/|favicon.svg|robots.txt|sitemap.xml).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/rooms.php",
+      "destination": "/rooms",
+      "permanent": true
+    },
+    {
+      "source": "/heritage-classic-rooms.php",
+      "destination": "/rooms/heritage-classic",
+      "permanent": true
+    },
+    {
+      "source": "/heritage-deluxe-room.php",
+      "destination": "/rooms/heritage-deluxe",
+      "permanent": true
+    },
+    {
+      "source": "/royal-premium-Deluxe-room.php",
+      "destination": "/rooms/royal-premium",
+      "permanent": true
+    },
+    {
+      "source": "/maharaja-suite-room.php",
+      "destination": "/rooms/maharaja-suite",
+      "permanent": true
+    },
+    {
+      "source": "/grand-banquet-hall.php",
+      "destination": "/banquet",
+      "permanent": true
+    },
+    {
+      "source": "/rooftop-restaurant.php",
+      "destination": "/restaurant",
+      "permanent": true
+    },
+    {
+      "source": "/about-hotel.php",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/gallery.php",
+      "destination": "/gallery",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us.php",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/reservation.php",
+      "destination": "/book",
+      "permanent": true
+    }
+  ]
+}
