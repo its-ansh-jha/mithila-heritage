@@ -37,5 +37,5 @@ export function MotionEffects(){
  },[pathname,enabled]);
  return <div ref={progress} className="reading-progress" aria-hidden="true"/>;
 }
-export function HeroWords({children}){return <span className="hero-line">{String(children).split(' ').map((word,i)=><span className="word-mask" key={i}><span className="hero-word">{word}</span>{' '}</span>)}</span>;}
+export function HeroWords({children}){return <span className="hero-line">{String(children).trim().split(/\s+/).map((word,i)=><React.Fragment key={i}>{i>0?' ':null}<span className="hero-word">{word}</span></React.Fragment>)}</span>;}
 export function MithilaFish({className=''}){return <svg className={className} viewBox="0 0 160 90" fill="none" aria-hidden="true"><g stroke="currentColor" strokeWidth="1.25"><path d="M22 45Q65-13 126 45Q65 103 22 45ZM126 45L152 21V69ZM29 45Q69 3 117 45Q69 87 29 45Z"/><path d="M64 16Q43 43 64 74M82 17Q65 45 82 73M99 26Q87 45 99 64M22 45H126M45 30L54 39L45 49M60 43L70 53L61 61M80 30L88 39L80 47M94 45L103 53M136 35V56M145 30V62"/><circle cx="43" cy="40" r="3"/><path d="M58 14L71 4L83 17M57 76L72 86L85 73"/></g></svg>;}

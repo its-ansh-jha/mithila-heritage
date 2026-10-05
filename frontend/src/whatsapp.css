@@ -52,3 +52,32 @@ body:before{display:none}
 @media(max-width:760px){.header-chat{width:40px;height:40px}.whatsapp-float{right:17px;bottom:17px;width:52px;height:52px;justify-content:center;padding:0}.whatsapp-float>span{display:none}.hero-visual{max-width:440px}.heritage-frame{inset:-8px 1px 53px -8px}.heritage-frame>span{font-size:21px;top:-20px}.whatsapp-process{gap:12px}.whatsapp-process>span{font-size:10px;flex-direction:column;align-items:flex-start;gap:3px;line-height:1.5}.whatsapp-booking .form-panel>h3{font-size:35px}.whatsapp-ready{padding:17px;gap:12px}.quick-book-note{font-size:10px;padding-inline:20px}.quick-book form{padding:23px 20px}.quick-book>.whatsapp-ready{margin-inline:20px}.whatsapp-submit{font-size:11px;gap:12px;padding-inline:18px}.marquee-track{animation:none;transform:none}.location-art .mandala{animation:none}.heritage-marquee{overflow:hidden}.motion-control{bottom:20px}.whatsapp-policy-links{gap:17px}}
 @media(max-width:420px){.header-actions{gap:8px}.header-chat{width:36px;height:36px}.header-chat svg{width:18px}.quick-book form{gap:18px 12px}.quick-book .button{font-size:10px;padding-inline:10px;gap:7px}.quick-book form label{padding-right:6px}}
 @media print{.whatsapp-float,.whatsapp-ready,.header-chat{display:none!important}}
+
+/* Keep the room photograph intact and typography readable at every width. */
+.night-hero{align-items:center;min-height:640px;gap:6%;overflow:visible}
+.modern-hero h1{font-size:clamp(58px,6.5vw,102px);line-height:1.06;letter-spacing:-.025em}
+.modern-hero h1>em{margin-top:.06em}
+.hero-line{display:block;white-space:normal;word-spacing:.08em}
+.hero-word{display:inline-block;overflow:visible;vertical-align:baseline}
+.hero-visual{height:auto;min-width:0;width:100%;max-width:620px;padding:0;margin:0;align-self:center}
+.hero-photo-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 0 16px;color:var(--gold);font-size:9px;letter-spacing:1.6px;line-height:1.7}
+.hero-photo-heading>span:first-child{display:flex;align-items:center;gap:10px}
+.hero-photo-heading svg{width:27px;height:27px}
+.hero-photo-heading>span:last-child{white-space:nowrap;color:var(--muted);font-size:10px;letter-spacing:1px}
+.hero-scene{display:block;height:auto;width:100%;border-radius:8px;border:1px solid #a1804b85;outline:none;overflow:hidden;background:var(--paper);box-shadow:0 20px 50px #0004}
+.hero-scene:after{display:none}
+.hero-scene>img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:center;margin:0;border-radius:0;animation:none;filter:none}
+.hero-scene:hover>img{filter:none}
+.scene-caption{position:static;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 25px;background:linear-gradient(115deg,#292015,#1c1711);font-size:30px;line-height:1.12;letter-spacing:0;color:var(--ink)}
+.scene-caption>span:first-child{max-width:none;min-width:0;line-height:1.12;flex:1;text-wrap:balance}
+.scene-caption small{font-family:var(--sans);font-size:11px;font-weight:400;line-height:1.6;margin-top:9px;letter-spacing:.1px;color:#d7c3a3}
+.hero-photo-arrow{display:grid;place-items:center;width:42px;height:42px;flex-shrink:0;border:1px solid #8d7048;border-radius:50%;color:var(--gold)}
+.hero-room-selector{position:static;display:flex;gap:14px;padding-top:12px}
+.hero-room-selector button{min-width:0;min-height:44px;gap:9px;padding:0 2px;flex:1}
+.hero-photo-note{font-size:8px;letter-spacing:1.5px;text-align:center;line-height:1.8;color:var(--muted);margin-top:4px}
+.hero-buttons{flex-wrap:wrap}
+.section-heading h2,.story-copy h2,.dining-copy h2,.page-hero h1{line-height:1.08}
+.room-card h3{line-height:1.14}
+@media(max-width:1000px){.modern-hero h1{font-size:clamp(54px,6.5vw,72px)}.scene-caption{font-size:25px;padding:20px}.hero-photo-heading{font-size:8px;letter-spacing:1px}}
+@media(max-width:760px){.night-hero{min-height:0;gap:38px;padding:38px 7% 16px}.modern-hero h1{font-size:clamp(48px,12.8vw,76px);line-height:1.07;letter-spacing:-.022em}.hero-visual{height:auto;max-width:540px;margin:0 auto;padding:0}.hero-scene{height:auto;border-radius:6px}.hero-scene>img{height:auto;aspect-ratio:3/2;margin:0;object-position:center}.hero-photo-heading{font-size:8px;padding-bottom:13px;letter-spacing:1.1px}.hero-photo-heading svg{width:24px;height:24px}.scene-caption{position:static;font-size:27px;padding:20px;gap:15px}.scene-caption>span:first-child{max-width:none;line-height:1.14}.scene-caption small{font-size:11px;margin-top:8px;line-height:1.7}.hero-room-selector{position:static;padding-top:8px;gap:12px}.hero-photo-note{font-size:8px;letter-spacing:1px}.hero-intro{line-height:1.8;margin-top:22px}.hero-buttons{margin-top:25px}.modern-booking{margin-top:18px}}
+@media(max-width:380px){.modern-hero h1{font-size:clamp(43px,12.6vw,48px)}.hero-photo-heading{font-size:7px;letter-spacing:.7px;gap:8px}.hero-photo-heading>span:first-child{gap:7px}.scene-caption{font-size:25px;padding:18px 16px}.hero-photo-arrow{width:36px;height:36px}.scene-caption small{font-size:10px}.hero-photo-note{letter-spacing:.7px}}

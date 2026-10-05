@@ -21,11 +21,10 @@ export default function Home({site}){
     <div className="hero-reveal hero-footnote"><MithilaFish/><span>ROOTED IN CULTURE.<br/>THOUGHTFUL IN EVERY DETAIL.</span></div>
    </div>
    <div className="hero-visual">
-    <div className="hero-ornament"><Mandala/></div><div className="heritage-frame" aria-hidden="true"><span>मिथिला</span><i/><i/></div>
-    <Link to={'/rooms/'+room.id} className="hero-scene"><img src={room.image} alt={room.name+' at Mithila Heritage'} fetchPriority="high"/><div className="scene-caption"><span>{room.name}<small>{money(room.rate*100)} / night + 5% GST</small></span><ArrowUpRight size={25}/></div></Link>
+    <div className="hero-photo-heading"><span><Lotus/>A CLOSER LOOK AT MITHILA</span><span>0{featured+1} / 04</span></div>
+    <Link to={'/rooms/'+room.id} className="hero-scene"><img src={room.image} alt={room.name+' at Mithila Heritage'} width="1600" height="1067" fetchPriority="high"/><div className="scene-caption"><span>{room.name}<small>{money(room.rate*100)} / night + 5% GST</small></span><span className="hero-photo-arrow"><ArrowUpRight size={23}/></span></div></Link>
     <div className="hero-room-selector" role="group" aria-label="Preview a room">{site.rooms.map((r,i)=><button key={r.id} onClick={()=>setFeatured(i)} aria-pressed={featured===i} aria-label={'Preview '+r.name}><span>0{i+1}</span><span className="selector-line"/></button>)}</div>
-    <div className="heritage-orbit" aria-hidden="true"><svg viewBox="0 0 140 140"><defs><path id="orbit-circle" d="M70,70 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs><text><textPath href="#orbit-circle">MITHILA AT HEART · PATNA AT HOME · </textPath></text></svg></div>
-    <span className="hero-side-note">JAYPRAKASH NAGAR · PATNA, BIHAR</span>
+    <p className="hero-photo-note">FOUR ROOM CATEGORIES · ONE WARM WELCOME</p>
    </div>
   </section>
   <div className="container booking-container modern-booking"><QuickBook site={site}/></div>
