@@ -164,6 +164,7 @@ export function buildSchemas(pathname,site,seo){
   hasMap:'https://www.google.com/maps/search/?api=1&query=Mithila+Heritage+Patna',
   checkinTime:site?.checkIn,
   checkoutTime:site?.checkOut,
+  sameAs:['https://www.instagram.com/mithilaheritage01/'],
   amenityFeature:[
    { '@type':'LocationFeatureSpecification',name:'Free Wi-Fi',value:true },
    { '@type':'LocationFeatureSpecification',name:'Free parking',value:true },
@@ -183,6 +184,7 @@ export function buildSchemas(pathname,site,seo){
   email:site?.email,
   telephone:site?.phone,
   address,
+  sameAs:['https://www.instagram.com/mithilaheritage01/'],
   contactPoint:[
    {'@type':'ContactPoint',telephone:site?.phone,contactType:'reservations',areaServed:'IN',availableLanguage:['English','Hindi']},
    {'@type':'ContactPoint',telephone:site?.secondaryPhone,contactType:'customer service',areaServed:'IN',availableLanguage:['English','Hindi']}
