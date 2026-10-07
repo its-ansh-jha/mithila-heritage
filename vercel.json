@@ -14,6 +14,17 @@
   ],
   "redirects": [
     {
+      "source": "/(.*)",
+      "destination": "https://www.mithilaheritage.in/$1",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "mithilaheritage.in"
+        }
+      ]
+    },
+    {
       "source": "/index.php",
       "destination": "/",
       "permanent": true
