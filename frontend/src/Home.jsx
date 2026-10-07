@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect,useState} from 'react';
 import {Link} from 'react-router-dom';
 import {ArrowDown,ArrowUpRight,MapPin,Wifi,ConciergeBell,UtensilsCrossed,Car,Wind,Clock,Users} from 'lucide-react';
 import {Button,TextLink,Eyebrow,Mandala,Lotus} from './components';
@@ -10,7 +10,8 @@ import {money} from '../../shared/catalog';
 export function RoomCard({room,index=0}){return <article className="room-card" data-scroll><Link to={'/rooms/'+room.id} className="room-image"><img src={room.image} alt={room.name+' at Mithila Heritage, Patna'} loading="lazy"/><span className="room-number">0{index+1}</span><span className="image-arrow"><ArrowUpRight/></span></Link><div className="room-meta"><span>{room.eyebrow}</span><span><Users size={13}/> {room.capacity} guests</span></div><Link to={'/rooms/'+room.id}><h3>{room.name}</h3></Link><div className="room-card-bottom"><p className="room-price"><strong>{money(room.rate*100)}</strong><span>/ night · + 5% GST</span></p><TextLink to={'/rooms/'+room.id}>View room</TextLink></div></article>}
 function QuickBook({site}){const [error,setError]=useState(''),[url,setUrl]=useState('');return <div className="quick-book"><div className="quick-book-heading"><Lotus/><span>YOUR STAY, ONE CONVERSATION AWAY</span><Link to="/book">Plan your stay <ArrowUpRight size={14}/></Link></div><form onSubmit={e=>{e.preventDefault();setError('');setUrl('');try{setUrl(openWhatsApp(roomMessage(Object.fromEntries(new FormData(e.currentTarget)),site)));}catch(e){setError(e.message);}}}><label><span>YOUR ROOM</span><select name="roomType" aria-label="Room category">{site.rooms.map(r=><option value={r.id} key={r.id}>{r.name}</option>)}</select></label><label><span>CHECK IN</span><input aria-label="Arrival date" type="date" name="date" min={localDay()} defaultValue={localDay(1)} required/></label><label><span>CHECK OUT</span><input aria-label="Departure date" type="date" name="endDate" min={localDay(1)} defaultValue={localDay(2)} required/></label><label><span>GUESTS</span><select name="guests" aria-label="Guests" defaultValue="2">{[1,2,3,4,5,6,7,8,9,10].map(n=><option key={n} value={n}>{n} {n===1?'guest':'guests'}</option>)}</select></label><button className="button" type="submit">Check on WhatsApp <ArrowUpRight size={18}/></button></form>{error&&<p className="quick-book-error" role="alert">{error}</p>}<WhatsAppReady url={url}/><p className="quick-book-note">Your details open in WhatsApp. Our hotel team confirms availability personally.</p></div>}
 export default function Home({site}){
- const [featured,setFeatured]=useState(2);const room=site.rooms[featured]||site.rooms[0];
+ const [featured,setFeatured]=useState(0);const [cycleKey,setCycleKey]=useState(0);const room=site.rooms[featured]||site.rooms[0];
+ useEffect(()=>{if((site.rooms?.length||0)<2)return;const timer=setInterval(()=>setFeatured(i=>(i+1)%site.rooms.length),4500);return()=>clearInterval(timer);},[site.rooms?.length,cycleKey]);
  return <>
   <section className="modern-hero night-hero">
    <div className="hero-editorial">
@@ -23,7 +24,7 @@ export default function Home({site}){
    <div className="hero-visual">
     <div className="hero-photo-heading"><span><Lotus/>A CLOSER LOOK AT MITHILA</span><span>0{featured+1} / 04</span></div>
     <Link to={'/rooms/'+room.id} className="hero-scene"><img src={room.image} alt={room.name+' at Mithila Heritage'} width="1600" height="1067" fetchPriority="high"/><div className="scene-caption"><span>{room.name}<small>{money(room.rate*100)} / night + 5% GST</small></span><span className="hero-photo-arrow"><ArrowUpRight size={23}/></span></div></Link>
-    <div className="hero-room-selector" role="group" aria-label="Preview a room">{site.rooms.map((r,i)=><button key={r.id} onClick={()=>setFeatured(i)} aria-pressed={featured===i} aria-label={'Preview '+r.name}><span>0{i+1}</span><span className="selector-line"/></button>)}</div>
+    <div className="hero-room-selector" role="group" aria-label="Preview a room">{site.rooms.map((r,i)=><button key={r.id} onClick={()=>{setFeatured(i);setCycleKey(k=>k+1);}} aria-pressed={featured===i} aria-label={'Preview '+r.name}><span>0{i+1}</span><span className="selector-line"/></button>)}</div>
     <p className="hero-photo-note">FOUR ROOM CATEGORIES · ONE WARM WELCOME</p>
    </div>
   </section>
