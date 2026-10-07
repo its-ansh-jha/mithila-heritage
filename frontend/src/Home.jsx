@@ -53,6 +53,23 @@ export default function Home({site}){
    </div>
   </section>
   <section className="comfort-section"><div className="container"><div className="center" data-scroll><Eyebrow>COMFORT, TAKEN CARE OF</Eyebrow><h2>The little things.<br/><em>Thoughtfully covered.</em></h2></div><div className="amenity-grid">{[[Wifi,'Free Wi-Fi','Throughout the hotel'],[ConciergeBell,'Room service','Available 24/7'],[UtensilsCrossed,'In-room dining','Comfort at your door'],[Car,'Free parking','For hotel guests'],[Wind,'Air conditioning','Comfortable rooms']].map(([Icon,title,desc])=><div key={title} data-scroll><Icon strokeWidth={1.2}/><h3>{title}</h3><p>{desc}</p></div>)}</div></div></section>
+  <section className="section container hotel-faq local-search-section" aria-labelledby="patna-hotel-guide">
+   <div>
+    <Eyebrow>HOTEL IN PATNA</Eyebrow>
+    <h2 id="patna-hotel-guide">A comfortable Patna stay.<br/><em>With more under one roof.</em></h2>
+    <p>If you are comparing hotels in Patna, Mithila Heritage brings rooms, rooftop dining and a banquet hall together in Jayprakash Nagar near the Ashiana–Kurji side of the city. It is suited to family stays, business visits, celebrations and travellers looking for a boutique hotel experience in Patna.</p>
+    <p>Choose from Heritage Classic, Twin Bed / Heritage Deluxe, Royal Premium and Maharaja Suite rooms, then speak directly with the hotel team on WhatsApp for current availability.</p>
+    <div className="seo-link-row"><TextLink to="/rooms">Hotel rooms in Patna</TextLink><TextLink to="/restaurant">Rooftop restaurant in Patna</TextLink><TextLink to="/banquet">Banquet hall in Patna</TextLink><TextLink to="/contact">Location & directions</TextLink></div>
+   </div>
+   <div>
+    <details><summary>Where is Mithila Heritage located in Patna?</summary><p>Mithila Heritage is at B-2, Jayprakash Nagar, Ashiana Kurji Nala Road, Patna, Bihar 800025, convenient for guests searching for a hotel near Ashiana, Kurji and Jayprakash Nagar.</p></details>
+    <details><summary>What hotel rooms are available in Patna at Mithila Heritage?</summary><p>The hotel offers four room categories: Heritage Classic, Twin Bed / Heritage Deluxe, Royal Premium Deluxe and Maharaja Suite.</p></details>
+    <details><summary>Does Mithila Heritage have a rooftop restaurant in Patna?</summary><p>Yes. The rooftop restaurant serves Indian, Continental and Chinese cuisine and welcomes family dinners, quiet evenings and celebrations.</p></details>
+    <details><summary>Can I book a banquet hall or wedding venue in Patna here?</summary><p>Yes. Mithila Heritage hosts weddings, engagements, birthdays, anniversaries, receptions and corporate gatherings with catering and event support.</p></details>
+    <details><summary>Does the hotel offer parking and Wi-Fi?</summary><p>Guests have access to free parking and Wi-Fi, along with air-conditioned rooms, in-room dining and room service.</p></details>
+    <details><summary>How do I book a room at Mithila Heritage?</summary><p>Select your room and dates on the website, then open the prepared WhatsApp enquiry. The hotel team confirms the current room rate and availability personally.</p></details>
+   </div>
+  </section>
   <section className="location-section container" data-scroll><div className="location-art"><Mandala/><MapPin size={38} strokeWidth={1}/><span>PATNA</span><p>YOUR MITHILA ADDRESS</p></div><div><Eyebrow>COME FIND US</Eyebrow><h2>A city to discover.<br/><em>A place to return.</em></h2><p className="address">{site.address}</p><p>Check-in {site.checkIn} · Check-out {site.checkOut}</p><TextLink to="/contact">Contact & directions</TextLink></div></section>
  </>;
 }
