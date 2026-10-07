@@ -34,7 +34,7 @@ Public areas may have CCTV for guest and staff safety.
 This policy may change; updates will appear on the hotel's policy page.`,
  cancellationPolicy:`Cancellation & refund policy · October 2026
 
-Once a payment is successfully completed, the amount paid is final and non-refundable. No amount paid will be refunded after payment has been completed.
+Once a payment is successfully completed, the full amount paid is final and non-refundable. No full or partial refund will be issued after payment has been completed.
 
 This policy applies to room reservations, banquet and event bookings, dining reservations, packages, offers, advance payments, deposits, and any other paid hotel service.
 
