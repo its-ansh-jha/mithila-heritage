@@ -34,15 +34,13 @@ Public areas may have CCTV for guest and staff safety.
 This policy may change; updates will appear on the hotel's policy page.`,
  cancellationPolicy:`Cancellation & refund policy · October 2026
 
-Once payment has been made and successfully completed, the amount paid is strictly non-refundable. No refund will be issued under any circumstances.
+Once a payment is successfully completed, the amount paid is final and non-refundable. No amount paid will be refunded after payment has been completed.
 
-This no-refund rule applies to room reservations, banquet and event bookings, dining reservations, packages, offers, advance payments, deposits, and every other hotel service for which payment has been made.
+This policy applies to room reservations, banquet and event bookings, dining reservations, packages, offers, advance payments, deposits, and any other paid hotel service.
 
-Cancelling a reservation after payment does not entitle the guest to any refund, whether the cancellation is made in advance, close to the booking date, or on the scheduled date.
+Cancelling a reservation, not arriving for a booking, leaving early, not using a service, or changing your plans does not create any right to a refund.
 
-A no-show, early departure, unused service, change of plan, or failure to use a confirmed booking does not create any entitlement to a refund.
+Requests to change a booking date, room category, event date, or other reservation details are subject to availability and approval by Mithila Heritage. An approved change does not make any paid amount refundable.
 
-Any request to change the booking date, room category, event date, or other reservation details is subject to availability and approval by the hotel. Approval of a change does not mean that a refund will be issued.
-
-Please contact the hotel reception or official contact channels if you need assistance with a cancellation or booking change before the scheduled date.`
+For cancellation or booking-change assistance, please contact the hotel reception or an official Mithila Heritage contact channel.`
 };
