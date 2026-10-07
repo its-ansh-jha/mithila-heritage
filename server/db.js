@@ -14,6 +14,7 @@ export async function site(db=pool){
   ...stored,
   cancellationPolicy:initialSite.cancellationPolicy,
   taxPercent:initialSite.taxPercent,
+  roomOffer:structuredClone(initialSite.roomOffer),
   gallery:structuredClone(initialSite.gallery),
   rooms:(stored.rooms||initialSite.rooms).map(room=>{
    const current=currentRooms.get(room.id);
