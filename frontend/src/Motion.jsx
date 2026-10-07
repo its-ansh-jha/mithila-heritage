@@ -30,10 +30,32 @@ export function MotionEffects(){
    for(const entry of entries){if(!entry.isIntersecting||seen.has(entry.target))continue;seen.add(entry.target);observer.unobserve(entry.target);run(entry.target,{y:[16,0],duration:700,ease:'out(3)'});}
   },{threshold:.04}):null;
   root.querySelectorAll('[data-scroll]').forEach(el=>observer?.observe(el));
+
+  // Drive the homepage heritage ribbon with the Web Animations API.
+  // Measuring one duplicated group avoids mobile-browser inconsistencies with
+  // percentage transforms on width:max-content tracks.
+  const marquee=root.querySelector('.marquee-track');
+  let marqueeAnimation=null;
+  if(enabled&&marquee){
+   const startMarquee=()=>{
+    marqueeAnimation?.cancel();
+    const group=marquee.querySelector('.marquee-group');
+    const distance=group?.getBoundingClientRect().width||0;
+    if(!distance)return;
+    marquee.style.animation='none';
+    marqueeAnimation=marquee.animate(
+     [{transform:'translate3d(0,0,0)'},{transform:`translate3d(-${distance}px,0,0)`}],
+     {duration:Math.max(18000,distance/42*1000),iterations:Infinity,easing:'linear'}
+    );
+   };
+   startMarquee();
+   if(document.fonts?.ready)document.fonts.ready.then(()=>{if(marquee?.isConnected)startMarquee();});
+  }
+
   function updateProgress(){frame=0;const max=document.documentElement.scrollHeight-window.innerHeight;const value=max>0?Math.max(0,Math.min(1,window.scrollY/max)):0;if(progress.current)progress.current.style.transform='scaleX('+value+')';}
   const onScroll=()=>{if(!frame)frame=requestAnimationFrame(updateProgress);};
   window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',onScroll,{passive:true});updateProgress();
-  return()=>{observer?.disconnect();cancelAnimationFrame(frame);window.removeEventListener('scroll',onScroll);window.removeEventListener('resize',onScroll);animations.forEach(animation=>animation.revert());};
+  return()=>{observer?.disconnect();marqueeAnimation?.cancel();if(marquee)marquee.style.animation='';cancelAnimationFrame(frame);window.removeEventListener('scroll',onScroll);window.removeEventListener('resize',onScroll);animations.forEach(animation=>animation.revert());};
  },[pathname,enabled]);
  return <div ref={progress} className="reading-progress" aria-hidden="true"/>;
 }
