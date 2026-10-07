@@ -10,29 +10,29 @@ export const initialSite = {
   bookingEnabled: false, verified: false, taxPercent: 5,
   ...publishedPolicies,
   rooms: [
-    {id:'heritage-classic',name:'Heritage Classic',eyebrow:'A RESTFUL RETREAT',image:'/images/room1.webp',rate:2700,capacity:2,description:'A considered space to slow down. Soft tones, comfortable furnishings, and the little essentials for an easy stay in Patna.',amenities:publishedAmenities},
-    {id:'heritage-deluxe',name:'Heritage Deluxe',eyebrow:'ROOM TO UNWIND',image:'/images/room4.webp',rate:2999,capacity:2,description:'Settle into an inviting room with a little more space to make your own. An easy choice for unhurried mornings and restful evenings.',amenities:publishedAmenities},
-    {id:'royal-premium',name:'Royal Premium Deluxe',eyebrow:'AN ELEVATED EVERYDAY',image:'/images/room3.webp',rate:3499,capacity:2,description:'Warm interiors and thoughtful comfort come together in our premium retreat. A welcoming base for exploring the city or simply staying in.',amenities:publishedAmenities},
-    {id:'maharaja-suite',name:'Maharaja Suite',eyebrow:'STAY A LITTLE GRANDER',image:'/images/room2.webp',rate:3999,capacity:2,description:'Our signature suite invites you to take your time. A generous, comfortable setting for special stays and moments worth lingering over.',amenities:publishedAmenities}
+    {id:'heritage-classic',name:'Heritage Classic',eyebrow:'A RESTFUL RETREAT',image:'https://drive.google.com/thumbnail?id=1KJ1VjZUiBaTfIYDe8YaZwEOLDIRG2ZJ0&sz=w1600',rate:2700,capacity:2,description:'A considered space to slow down. Soft tones, comfortable furnishings, and the little essentials for an easy stay in Patna.',amenities:publishedAmenities},
+    {id:'heritage-deluxe',name:'Heritage Deluxe',eyebrow:'ROOM TO UNWIND',image:'https://drive.google.com/thumbnail?id=1w5Cy8K3pZb-uBAdp8-VxzLrB2ROcMWHX&sz=w1600',rate:2999,capacity:2,description:'Settle into an inviting room with a little more space to make your own. An easy choice for unhurried mornings and restful evenings.',amenities:publishedAmenities},
+    {id:'royal-premium',name:'Royal Premium Deluxe',eyebrow:'AN ELEVATED EVERYDAY',image:'https://drive.google.com/thumbnail?id=14jgddXGJhyRkikf5nPynQZfrlBOfkPyV&sz=w1600',rate:3499,capacity:2,description:'Warm interiors and thoughtful comfort come together in our premium retreat. A welcoming base for exploring the city or simply staying in.',amenities:publishedAmenities},
+    {id:'maharaja-suite',name:'Maharaja Suite',eyebrow:'STAY A LITTLE GRANDER',image:'https://drive.google.com/thumbnail?id=1J4ilN5gOzhXKWSRAe6_6Egk8tdsjHiSE&sz=w1600',rate:3999,capacity:2,description:'Our signature suite invites you to take your time. A generous, comfortable setting for special stays and moments worth lingering over.',amenities:publishedAmenities}
   ],
   gallery:[
   {
-    "src": "/images/room1.webp",
+    "src": "https://drive.google.com/thumbnail?id=1KJ1VjZUiBaTfIYDe8YaZwEOLDIRG2ZJ0&sz=w1600",
     "category": "Rooms",
     "alt": "Heritage Classic guest room"
   },
   {
-    "src": "/images/room4.webp",
+    "src": "https://drive.google.com/thumbnail?id=1w5Cy8K3pZb-uBAdp8-VxzLrB2ROcMWHX&sz=w1600",
     "category": "Rooms",
     "alt": "Heritage Deluxe guest room"
   },
   {
-    "src": "/images/room3.webp",
+    "src": "https://drive.google.com/thumbnail?id=14jgddXGJhyRkikf5nPynQZfrlBOfkPyV&sz=w1600",
     "category": "Rooms",
     "alt": "Royal Premium Deluxe guest room"
   },
   {
-    "src": "/images/room2.webp",
+    "src": "https://drive.google.com/thumbnail?id=1J4ilN5gOzhXKWSRAe6_6Egk8tdsjHiSE&sz=w1600",
     "category": "Rooms",
     "alt": "Maharaja Suite"
   },
