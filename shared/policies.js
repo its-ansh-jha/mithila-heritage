@@ -34,9 +34,9 @@ Public areas may have CCTV for guest and staff safety.
 This policy may change; updates will appear on the hotel's policy page.`,
  cancellationPolicy:`Cancellation & refund policy · October 2026
 
-All payments made to Mithila Heritage are final and non-refundable once payment is completed.
+Once any payment is completed, the full amount paid is final and non-refundable. No refund will be issued after payment under any circumstances.
 
-This non-refundable condition applies to room reservations, banquet and event bookings, dining reservations, packages, offers, advance payments, deposits, and any other hotel service for which payment has been made.
+This no-refund rule applies to room reservations, banquet and event bookings, dining reservations, packages, offers, advance payments, deposits, and every other hotel service for which payment has been made.
 
 Cancelling a reservation after payment does not entitle the guest to any refund, whether the cancellation is made in advance, close to the booking date, or on the scheduled date.
 
