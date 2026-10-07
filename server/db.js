@@ -17,7 +17,7 @@ export async function site(db=pool){
   gallery:structuredClone(initialSite.gallery),
   rooms:(stored.rooms||initialSite.rooms).map(room=>{
    const current=currentRooms.get(room.id);
-   return current?{...room,image:current.image,rate:current.rate}:room;
+   return current?{...room,image:current.image,gallery:structuredClone(current.gallery||[]),rate:current.rate}:room;
   })
  };
 }
