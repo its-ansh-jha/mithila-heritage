@@ -30,7 +30,6 @@ for(const route of routes){
  let html=base;
  html=replaceTag(html,/<title>[^<]*<\/title>/i,`<title>${escape(seo.title)}</title>`);
  html=replaceTag(html,/<meta name="description"[^>]*>/i,`<meta name="description" content="${escape(seo.description)}"/>`);
- html=replaceTag(html,/<meta name="keywords"[^>]*>/i,`<meta name="keywords" content="${escape(seo.keywords)}"/>`);
  html=replaceTag(html,/<link rel="canonical"[^>]*>/i,`<link rel="canonical" href="${escape(seo.canonical)}"/>`);
  html=replaceTag(html,/<meta property="og:title"[^>]*>/i,`<meta property="og:title" content="${escape(seo.title)}"/>`);
  html=replaceTag(html,/<meta property="og:description"[^>]*>/i,`<meta property="og:description" content="${escape(seo.description)}"/>`);
