@@ -5,4 +5,8 @@ Disallow: /account
 Disallow: /manage
 Disallow: /book
 Disallow: /api/
-Sitemap: https://mithilaheritage.in/sitemap.xml
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+Sitemap: https://www.mithilaheritage.in/sitemap.xml
