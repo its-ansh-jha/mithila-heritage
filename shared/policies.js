@@ -1,14 +1,14 @@
-// Transcribed in concise form from the hotel's published policies, checked 5 October 2026.
+// Transcribed in concise form from the hotel's published policies, updated 7 October 2026.
 export const publishedPolicies={
- terms:`Published terms · February 2026
+ terms:`Published terms · October 2026
 
 Bookings depend on availability. Guests must present valid identification at check-in.
 
 Check-in is at 12:00 PM; check-out is at 11:00 AM. Early arrival or late departure depends on availability and may cost extra.
 
-Cancellation is free until 24 hours before check-in. Later cancellations may incur one night's charge.
+All payments are final and non-refundable once payment is completed. Cancelling a reservation or failing to arrive does not create any entitlement to a refund.
 
-Banquet and event bookings require advance payment confirmation. Cancellation may incur retention charges under the event arrangements.
+Banquet and event bookings require advance payment confirmation. Any amount paid toward a banquet, event, package, or reservation is non-refundable once payment is completed.
 
 Outside food is not permitted. Restaurant hours and menus may change.
 
@@ -27,22 +27,22 @@ Payment gateways handle payment transactions. The hotel does not store sensitive
 
 You can contact the hotel to access, correct, review, or request deletion of your personal information. Reception and the hotel's official contact channels can also answer privacy questions.
 
-Reservations depend on availability and confirmation. Guests must provide accurate details; cancellation and refund conditions may apply.
+Reservations depend on availability and confirmation. Guests must provide accurate details; cancellation conditions may apply and completed payments are non-refundable.
 
 Public areas may have CCTV for guest and staff safety.
 
 This policy may change; updates will appear on the hotel's policy page.`,
- cancellationPolicy:`Published refund policy · February 2026
+ cancellationPolicy:`Cancellation & refund policy · October 2026
 
-Room reservations cancelled at least 24 hours before scheduled check-in qualify for a full refund to the original payment method.
+Once payment is completed, the amount paid is final and non-refundable. No refund will be issued after payment is completed.
 
-Cancellations within 24 hours of check-in may incur one night's charge; any remaining balance is refundable. A no-show without prior cancellation may make the full booking amount non-refundable.
+This applies to room reservations, banquet and event bookings, dining reservations, packages, offers, advance payments, deposits, and any other hotel service for which payment has been made.
 
-Banquet and event refunds depend on the cancellation timeline in the signed event agreement.
+Cancelling a reservation after payment does not entitle the guest to a refund.
 
-Approved refunds typically take 7–10 business days. Actual processing time may vary by bank or payment provider.
+A no-show, early departure, unused service, change of plan, or failure to use a confirmed booking does not create any entitlement to a refund.
 
-Some promotions, discounted packages, or special event reservations may be marked non-refundable when booked.
+Any request to change the booking date, room category, event date, or other reservation details is subject to availability and approval by the hotel. Approval of a change does not mean that a refund will be issued.
 
-Contact the hotel reception or official contact channels for refund questions.`
+Please contact the hotel reception or official contact channels if you need assistance with a cancellation or booking change before the scheduled date.`
 };
