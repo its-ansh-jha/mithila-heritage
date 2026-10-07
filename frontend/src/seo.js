@@ -141,6 +141,9 @@ export function getSeo(pathname,site){
 }
 
 export function buildSchemas(pathname,site,seo){
+ const promo=site?.roomOffer;
+ const promoActive=!!(promo?.discountPercent&&(!promo.validFrom||Date.now()>=Date.parse(promo.validFrom+'T00:00:00+05:30'))&&(!promo.validThrough||Date.now()<=Date.parse(promo.validThrough+'T23:59:59+05:30')));
+ const promoRate=seo?.room&&promoActive?Math.round((seo.room.rate*(100-Number(promo.discountPercent))/100)*100)/100:seo?.room?.rate;
  const address={
   '@type':'PostalAddress',
   streetAddress:'B-2, Jayprakash Nagar, Ashiana Kurji Nala Road',
@@ -220,7 +223,7 @@ export function buildSchemas(pathname,site,seo){
    image:[seo.room.image,...(seo.room.gallery||[]).map(x=>x.src)].filter(Boolean),
    occupancy:{'@type':'QuantitativeValue',maxValue:seo.room.capacity},
    containedInPlace:{'@id':SITE_URL+'/#hotel'},
-   offers:{'@type':'Offer',price:String(seo.room.rate),priceCurrency:'INR',url:seo.canonical,availability:'https://schema.org/InStock'}
+   offers:{'@type':'Offer',price:String(promoRate),priceCurrency:'INR',url:seo.canonical,availability:'https://schema.org/InStock',...(promoActive&&promo?.validThrough?{priceValidUntil:promo.validThrough}:{}),...(promoActive?{description:promo.label}: {})}
   });
  }
  if(clean==='/restaurant'){
