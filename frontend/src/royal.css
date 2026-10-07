@@ -178,6 +178,22 @@ html[data-motion=reduced] .marquee-track{animation:none!important;transform:none
 }
 
 
+
+.price-offer-line{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+.price-offer-line del{font-size:13px;color:#978a78;text-decoration-color:#d9b574;text-decoration-thickness:1.5px}
+.discount-chip{display:inline-flex;align-items:center;justify-content:center;min-height:25px;padding:5px 9px;border-radius:999px;background:#e0ba72;color:#17110d!important;font-size:10px!important;font-weight:800;line-height:1;letter-spacing:.09em;white-space:nowrap;box-shadow:0 5px 15px #0002}
+.sale-price-line{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.sale-price-line strong{font-family:var(--font-display,serif);font-size:clamp(24px,2.1vw,34px);font-weight:500;color:#f4d69c;line-height:1}
+.sale-price-line>span{font-size:10px;color:#b8aa94;letter-spacing:.03em}
+.detail-price-block,.booking-price-highlight{margin:16px 0 18px;padding:14px 0;border-top:1px solid #765e3f55;border-bottom:1px solid #765e3f55}
+.detail-price-block .sale-price-line strong,.booking-price-highlight .sale-price-line strong{font-size:clamp(30px,3vw,42px)}
+.hero-price-line{display:flex!important;align-items:center;gap:7px;flex-wrap:wrap;margin-top:5px}
+.hero-price-line del{color:#aa9c88;font-size:10px}
+.hero-price-line b{color:#f2d39a;font-size:13px;font-weight:700}
+.hero-price-line em{font-style:normal;color:#c3b49d;font-size:9px}
+.room-card .room-price{display:block}
+.room-card .room-price .sale-price-line strong{font-size:28px}
+.room-card .room-price small{display:block;margin-top:6px}
 /* Limited-time room promotion */
 .room-offer-badge{position:absolute;z-index:3;top:16px;left:16px;padding:8px 11px;border:1px solid #f0d29d99;background:#17110de6;color:#f5dcae;font-size:10px;font-weight:700;letter-spacing:.13em;border-radius:999px;backdrop-filter:blur(8px)}
 .room-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 8px}
