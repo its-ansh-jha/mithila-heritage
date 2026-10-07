@@ -9,9 +9,12 @@ export function stayDetails(input,site,today=indiaToday()){
  const guests=count(input.guests,'guest count',20),quantity=count(input.quantity??Math.ceil(guests/2),'room count',10);
  const room=input.roomType?site.rooms.find(r=>r.id===input.roomType):null;if(input.roomType&&!room)throw new Error('Choose one of our four room categories.');
  if(room&&guests>quantity*room.capacity)throw new Error('Choose enough rooms for your guests. '+room.name+' accommodates up to '+room.capacity+' guests per room.');
- const nights=Math.round((Date.parse(endDate)-Date.parse(date))/86400000),subtotal=room?Math.round(room.rate*100)*nights*quantity:0;
+ const offer=site.roomOffer||null;
+ const discountActive=!!(room&&offer?.discountPercent&&(!offer.validFrom||today>=offer.validFrom)&&(!offer.validThrough||today<=offer.validThrough));
+ const effectiveRate=room?(discountActive?Math.round((room.rate*(100-Number(offer.discountPercent))/100)*100)/100:room.rate):0;
+ const nights=Math.round((Date.parse(endDate)-Date.parse(date))/86400000),subtotal=room?Math.round(effectiveRate*100)*nights*quantity:0;
  const tax=room?Math.round(subtotal*Number(site.taxPercent??5)/100):0;
- return {date,endDate,guests,quantity,room,nights,subtotal,tax,total:subtotal+tax};
+ return {date,endDate,guests,quantity,room,nights,subtotal,tax,total:subtotal+tax,effectiveRate,discountActive,discountPercent:discountActive?Number(offer.discountPercent):0};
 }
 export function whatsappUrl(message){return 'https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(message);}
 export function roomMessage(input,site,today){const s=stayDetails(input,site,today);return [
