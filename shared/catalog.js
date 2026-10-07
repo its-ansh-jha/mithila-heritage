@@ -12,7 +12,7 @@ export const initialSite = {
   rooms: [
     {id:'heritage-classic',name:'Heritage Classic',eyebrow:'A RESTFUL RETREAT',image:'https://drive.google.com/thumbnail?id=1KJ1VjZUiBaTfIYDe8YaZwEOLDIRG2ZJ0&sz=w1600',rate:2700,capacity:2,description:'A considered space to slow down. Soft tones, comfortable furnishings, and the little essentials for an easy stay in Patna.',amenities:publishedAmenities},
     {id:'heritage-deluxe',name:'Heritage Deluxe',eyebrow:'ROOM TO UNWIND',image:'https://drive.google.com/thumbnail?id=1w5Cy8K3pZb-uBAdp8-VxzLrB2ROcMWHX&sz=w1600',rate:2999,capacity:2,description:'Settle into an inviting room with a little more space to make your own. An easy choice for unhurried mornings and restful evenings.',amenities:publishedAmenities},
-    {id:'royal-premium',name:'Royal Premium Deluxe',eyebrow:'AN ELEVATED EVERYDAY',image:'https://drive.google.com/thumbnail?id=1C4l63t2LRKon-PAWht39zn1T40bnyzg2&sz=w1600',rate:3499,capacity:2,description:'Warm interiors and thoughtful comfort come together in our premium retreat. A welcoming base for exploring the city or simply staying in.',amenities:publishedAmenities},
+    {id:'royal-premium',name:'Royal Premium Deluxe',eyebrow:'AN ELEVATED EVERYDAY',image:'https://drive.google.com/thumbnail?id=14jgddXGJhyRkikf5nPynQZfrlBOfkPyV&sz=w1600',rate:3499,capacity:2,description:'Warm interiors and thoughtful comfort come together in our premium retreat. A welcoming base for exploring the city or simply staying in.',amenities:publishedAmenities},
     {id:'maharaja-suite',name:'Maharaja Suite',eyebrow:'STAY A LITTLE GRANDER',image:'https://drive.google.com/thumbnail?id=1J4ilN5gOzhXKWSRAe6_6Egk8tdsjHiSE&sz=w1600',rate:3999,capacity:2,description:'Our signature suite invites you to take your time. A generous, comfortable setting for special stays and moments worth lingering over.',amenities:publishedAmenities}
   ],
   gallery:[
@@ -22,9 +22,49 @@ export const initialSite = {
     "alt": "Heritage Classic guest room"
   },
   {
+    "src": "https://drive.google.com/thumbnail?id=1cQlo4g3tnMrQKZ944m7wby89eEcPlTOk&sz=w1600",
+    "category": "Rooms",
+    "alt": "Heritage Classic guest room"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1LhOpLdOeCH9t9eoovOL4hnhXi3YdE5UZ&sz=w1600",
+    "category": "Rooms",
+    "alt": "Heritage Classic guest room"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1xoLsPM7eR5_OyLD0EtA5zL9O014LRNQK&sz=w1600",
+    "category": "Rooms",
+    "alt": "Heritage Classic guest room"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1Mmivj5Qxbyk0B-Rak5Scny0GQ0ezCnJr&sz=w1600",
+    "category": "Rooms",
+    "alt": "Heritage Classic guest room"
+  },
+  {
     "src": "https://drive.google.com/thumbnail?id=1w5Cy8K3pZb-uBAdp8-VxzLrB2ROcMWHX&sz=w1600",
     "category": "Rooms",
-    "alt": "Heritage Deluxe guest room"
+    "alt": "Heritage Deluxe double-bed guest room"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=18o1XRzNKqrzoyxeB-DglBNhEdxXlTuw5&sz=w1600",
+    "category": "Rooms",
+    "alt": "Heritage Deluxe double-bed guest room"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1NxkC12TKgITSwsFe_kURmY4jgs5Mmy0Q&sz=w1600",
+    "category": "Rooms",
+    "alt": "Heritage Deluxe double-bed guest room"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1qbmmtH6tiEZdW-G9OSSFPaSEssrAz-bG&sz=w1600",
+    "category": "Rooms",
+    "alt": "Heritage Deluxe double-bed guest room"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1lh44DuI2N20xfQIMjb5VB73vGHXJxoZj&sz=w1600",
+    "category": "Rooms",
+    "alt": "Heritage Deluxe double-bed guest room"
   },
   {
     "src": "https://drive.google.com/thumbnail?id=14jgddXGJhyRkikf5nPynQZfrlBOfkPyV&sz=w1600",
@@ -32,7 +72,57 @@ export const initialSite = {
     "alt": "Royal Premium Deluxe guest room"
   },
   {
+    "src": "https://drive.google.com/thumbnail?id=13jwNV9IaSo81bv4AhGX3XTFt7KLU6z8K&sz=w1600",
+    "category": "Rooms",
+    "alt": "Royal Premium Deluxe guest room"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1C4l63t2LRKon-PAWht39zn1T40bnyzg2&sz=w1600",
+    "category": "Rooms",
+    "alt": "Royal Premium Deluxe guest room"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=19h2LEVn8T3F5dj4mm489ViAxnQYHsXuI&sz=w1600",
+    "category": "Rooms",
+    "alt": "Royal Premium Deluxe guest room"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1VuLwXjiOUGHhs4qQo789R-IPn81zG_Vm&sz=w1600",
+    "category": "Rooms",
+    "alt": "Royal Premium Deluxe guest room"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1us4Ua3vYQrbnjIeWmy5pTkVQIo5sjG5i&sz=w1600",
+    "category": "Rooms",
+    "alt": "Royal Premium Deluxe guest room"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1P980-3gMgHpV2bgyORKuydDroDHtQbQ3&sz=w1600",
+    "category": "Rooms",
+    "alt": "Royal Premium Deluxe guest room"
+  },
+  {
     "src": "https://drive.google.com/thumbnail?id=1J4ilN5gOzhXKWSRAe6_6Egk8tdsjHiSE&sz=w1600",
+    "category": "Rooms",
+    "alt": "Maharaja Suite"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1WwNK4ltCCdQpRiDshiAxIELD0rg_DNYh&sz=w1600",
+    "category": "Rooms",
+    "alt": "Maharaja Suite"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1PpCCfj8PovyTFlm-mafyVqb82I9Usz9R&sz=w1600",
+    "category": "Rooms",
+    "alt": "Maharaja Suite"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=18GYav3TOzxxGiaR7LHe6lQvm5ZaXnBTc&sz=w1600",
+    "category": "Rooms",
+    "alt": "Maharaja Suite"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1GOg1FyejlVFF53v8QlVWAFAcxM2xgcHf&sz=w1600",
     "category": "Rooms",
     "alt": "Maharaja Suite"
   },
