@@ -183,7 +183,15 @@ export function buildSchemas(pathname,site,seo){
   telephone:site?.phone,
   address
  };
- const items=[hotel,org];
+ const website={
+  '@context':'https://schema.org',
+  '@type':'WebSite',
+  '@id':SITE_URL+'/#website',
+  url:SITE_URL+'/',
+  name:BRAND,
+  alternateName:['Mithila Heritage Patna','Mithila Heritage Hotel']
+ };
+ const items=[hotel,org,website];
  const clean=pathname.replace(/\/$/,'')||'/';
  if(clean!=='/'){
   const crumbs=[{'@type':'ListItem',position:1,name:'Home',item:SITE_URL+'/'}];
@@ -215,6 +223,17 @@ export function buildSchemas(pathname,site,seo){
    url:seo.canonical,
    image:SITE_URL+'/images/IMG_3375.webp',
    servesCuisine:['Indian','Continental','Chinese'],
+   telephone:site?.phone,
+   address
+  });
+ }
+ if(clean==='/banquet'){
+  items.push({
+   '@context':'https://schema.org',
+   '@type':'EventVenue',
+   name:'Mithila Heritage Banquet Hall',
+   url:seo.canonical,
+   image:SITE_URL+'/images/IMG_3354.webp',
    telephone:site?.phone,
    address
   });
