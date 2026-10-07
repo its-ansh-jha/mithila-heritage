@@ -15,7 +15,7 @@ import './night.css';
 import './royal.css';
 import './whatsapp.css';
 import {MotionProvider} from './Motion';
-import {getSeo,buildSchemas,SITE_URL,LOGO_URL,DEFAULT_IMAGE} from './seo';
+import {getSeo,buildSchemas,SITE_URL} from './seo';
 function Metadata({site}){
  const {pathname}=useLocation();
  useEffect(()=>{
