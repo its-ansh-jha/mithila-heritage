@@ -44,14 +44,15 @@ export const seoKeywordClusters={
   'birthday venue near ashiana patna','engagement hall near kurji patna'
  ],
  local:[
-  'hotel near ashiana more patna','hotel near ashiana digha road','hotel near kurji more patna',
-  'hotel near rajiv nagar patna','hotel near patliputra patna','hotel near boring road patna',
-  'hotel near patliputra colony','hotel near digha patna','hotel near jp nagar patna','stay near ashiana patna',
-  'stay near kurji patna','rooms near patliputra patna','hotel near ashiana kurji nala road',
-  'hotel at jayprakash nagar patna','hotel near airport patna','hotel near patna airport',
-  'hotel near patna junction','hotel near railway station patna','patna hotel near airport',
-  'patna hotel near railway station','hotel near igims patna','hotel near aiims patna',
-  'hotel near ganga path patna','hotel near marine drive patna','hotel near atal path patna'
+  'hotel near ashiana more patna','hotel near ashiana patna','hotel near ashiyana patna',
+  'hotel near kurji patna','hotel near kurji more patna','hotel near jayprakash nagar patna',
+  'hotel in jayprakash nagar patna','hotel at jayprakash nagar patna','hotel near jp nagar patna',
+  'hotel on ashiana kurji nala road','hotel near ashiana kurji nala road','hotel ashiana kurji road patna',
+  'hotel in ashiana area patna','hotel in kurji area patna','stay near ashiana patna',
+  'stay near ashiyana patna','stay near kurji patna','rooms near ashiana patna',
+  'rooms near ashiyana patna','rooms near kurji patna','rooms in jayprakash nagar patna',
+  'hotel patna 800025','hotel near ashiana kurji patna','boutique hotel near ashiana patna',
+  'family hotel near kurji patna'
  ],
  brand:[
   'mithila heritage','mithila heritage patna','mithila heritage hotel','mithila heritage hotel patna',
