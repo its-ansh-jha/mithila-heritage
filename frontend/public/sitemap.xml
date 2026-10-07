@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://mithilaheritage.in/</loc></url><url><loc>https://mithilaheritage.in/rooms</loc></url><url><loc>https://mithilaheritage.in/rooms/heritage-classic</loc></url><url><loc>https://mithilaheritage.in/rooms/heritage-deluxe</loc></url><url><loc>https://mithilaheritage.in/rooms/royal-premium</loc></url><url><loc>https://mithilaheritage.in/rooms/maharaja-suite</loc></url><url><loc>https://mithilaheritage.in/restaurant</loc></url><url><loc>https://mithilaheritage.in/banquet</loc></url><url><loc>https://mithilaheritage.in/about</loc></url><url><loc>https://mithilaheritage.in/gallery</loc></url><url><loc>https://mithilaheritage.in/contact</loc></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+ <url><loc>https://www.mithilaheritage.in/</loc><lastmod>2026-10-07</lastmod><image:image><image:loc>https://www.mithilaheritage.in/images/IMG_3446.webp</image:loc><image:title>Mithila Heritage hotel in Patna</image:title></image:image></url>
+ <url><loc>https://www.mithilaheritage.in/rooms</loc><lastmod>2026-10-07</lastmod></url>
+ <url><loc>https://www.mithilaheritage.in/rooms/heritage-classic</loc><lastmod>2026-10-07</lastmod></url>
+ <url><loc>https://www.mithilaheritage.in/rooms/heritage-deluxe</loc><lastmod>2026-10-07</lastmod></url>
+ <url><loc>https://www.mithilaheritage.in/rooms/royal-premium</loc><lastmod>2026-10-07</lastmod></url>
+ <url><loc>https://www.mithilaheritage.in/rooms/maharaja-suite</loc><lastmod>2026-10-07</lastmod></url>
+ <url><loc>https://www.mithilaheritage.in/restaurant</loc><lastmod>2026-10-07</lastmod><image:image><image:loc>https://www.mithilaheritage.in/images/IMG_3375.webp</image:loc><image:title>Rooftop restaurant at Mithila Heritage Patna</image:title></image:image></url>
+ <url><loc>https://www.mithilaheritage.in/banquet</loc><lastmod>2026-10-07</lastmod><image:image><image:loc>https://www.mithilaheritage.in/images/IMG_3354.webp</image:loc><image:title>Banquet hall at Mithila Heritage Patna</image:title></image:image></url>
+ <url><loc>https://www.mithilaheritage.in/about</loc><lastmod>2026-10-07</lastmod></url>
+ <url><loc>https://www.mithilaheritage.in/gallery</loc><lastmod>2026-10-07</lastmod></url>
+ <url><loc>https://www.mithilaheritage.in/contact</loc><lastmod>2026-10-07</lastmod></url>
+</urlset>
