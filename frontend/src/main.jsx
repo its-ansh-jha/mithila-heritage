@@ -29,7 +29,6 @@ function Metadata({site}){
    Object.entries(attrs).forEach(([key,value])=>el.setAttribute(key,value));
   }
   meta('meta[name="description"]',{name:'description',content:seo.description});
-  meta('meta[name="keywords"]',{name:'keywords',content:seo.keywords});
   meta('meta[name="robots"]',{name:'robots',content:noindex?'noindex,nofollow':'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'});
   meta('meta[name="googlebot"]',{name:'googlebot',content:noindex?'noindex,nofollow':'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'});
   meta('meta[property="og:site_name"]',{property:'og:site_name',content:'Mithila Heritage'});
