@@ -1,9 +1,10 @@
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import {initialSite} from '../shared/catalog.js';
-import {getSeo,SITE_URL} from '../frontend/src/seo.js';
+import {getSeo,buildSchemas,SITE_URL} from '../frontend/src/seo.js';
 
 const routes=[
+ '/',
  '/rooms',
  '/rooms/heritage-classic',
  '/rooms/heritage-deluxe',
@@ -38,7 +39,9 @@ for(const route of routes){
  html=replaceTag(html,/<meta name="twitter:title"[^>]*>/i,`<meta name="twitter:title" content="${escape(seo.title)}"/>`);
  html=replaceTag(html,/<meta name="twitter:description"[^>]*>/i,`<meta name="twitter:description" content="${escape(seo.description)}"/>`);
  html=replaceTag(html,/<meta name="twitter:image"[^>]*>/i,`<meta name="twitter:image" content="${escape(image)}"/>`);
- const out=path.join(root,'dist',route.slice(1),'index.html');
+ const schema=`<script type="application/ld+json" id="seo-schema">${JSON.stringify(buildSchemas(route,initialSite,seo)).replaceAll('</script>','<\\/script>')}</script>`;
+ html=replaceTag(html,/<script type="application\/ld\+json" id="seo-schema">[\s\S]*?<\/script>/i,schema);
+ const out=route==='/'?path.join(root,'dist','index.html'):path.join(root,'dist',route.slice(1),'index.html');
  await mkdir(path.dirname(out),{recursive:true});
  await writeFile(out,html);
 }
