@@ -9,16 +9,16 @@ import {whatsappUrl,manageMessage} from '../../shared/whatsapp';
 const documents={
  privacy:{key:'privacy',title:'Privacy',accent:'& your information',nav:'Privacy policy',icon:ShieldCheck,intro:'How your personal information supports your stay, and how to contact us about it.'},
  terms:{key:'terms',title:'The details of',accent:'a thoughtful stay.',nav:'Terms & conditions',icon:FileText,intro:'Reservation, arrival and guest information for your time at Mithila Heritage.'},
- cancellation:{key:'cancellationPolicy',title:'When your',accent:'plans change.',nav:'Cancellations & refunds',icon:CalendarClock,intro:'Read the cancellation and refund conditions before making or changing a reservation.'}
+ cancellation:{key:'cancellationPolicy',title:'When your',accent:'plans change.',nav:'Cancellation & refund policy',icon:CalendarClock,intro:'Payments are non-refundable once completed. Read the conditions that apply if your plans change.'}
 };
 function sectionTitle(text,type,index){
  const checks=type==='cancellation'?[
-  [/at least 24 hours|until 24 hours/i,'Cancelling in advance'],
-  [/within 24 hours|no.show/i,'Late cancellations & no-shows'],
-  [/banquet|event agreement/i,'Banquet & event reservations'],
-  [/business days|processing time/i,'Refund processing'],
-  [/promotion|non.refundable when/i,'Special reservation conditions'],
-  [/contact|reception/i,'Questions about a refund']
+  [/all payments made|final and non-refundable/i,'Non-refundable payments'],
+  [/room reservations|banquet and event|dining reservations/i,'What the policy covers'],
+  [/cancelling a reservation/i,'Cancellations after payment'],
+  [/no-show|early departure|unused service/i,'No-shows & unused services'],
+  [/change the booking date|room category|event date/i,'Booking changes'],
+  [/contact|reception/i,'Need help with a booking?']
  ]:type==='terms'?[
   [/identification|valid.*id/i,'Reservations & identification'],
   [/check.in.*12|check.out.*11|early arrival/i,'Arrival & departure'],
@@ -43,8 +43,9 @@ export default function Policy({site}){
  const {type='terms'}=useParams();
  const document=documents[type];
  if(!document)return <Navigate to="/not-found" replace/>;
- const paragraphs=String(site?.[document.key]||publishedPolicies[document.key]).replace(/\r\n/g,'\n').split(/\n\s*\n/).map(text=>text.trim()).filter(Boolean);
- const edition=/^Published (terms|privacy policy|refund policy)/i.test(paragraphs[0]||'')?paragraphs.shift():null;
+ const sourcePolicy=type==='cancellation'?publishedPolicies.cancellationPolicy:(site?.[document.key]||publishedPolicies[document.key]);
+ const paragraphs=String(sourcePolicy).replace(/\r\n/g,'\n').split(/\n\s*\n/).map(text=>text.trim()).filter(Boolean);
+ const edition=/^(Published (terms|privacy policy|refund policy)|Cancellation & refund policy)/i.test(paragraphs[0]||'')?paragraphs.shift():null;
  const sections=paragraphs.map((text,index)=>({text,id:'policy-'+type+'-'+(index+1),title:sectionTitle(text,type,index)}));
  const Icon=document.icon;
  return <div className="policy-page">
@@ -61,7 +62,7 @@ export default function Policy({site}){
     <header className="policy-document-header"><div><span className="policy-document-icon"><Icon size={23}/></span><h2 id="policy-document-title">{document.nav}</h2>{edition&&<p>{edition}</p>}</div><button className="policy-print" type="button" onClick={()=>window.print()} aria-label={'Print '+document.nav.toLowerCase()}><Printer size={17}/><span>Print policy</span></button></header>
     {sections.length>1&&<nav className="policy-contents" aria-label="On this page"><span>IN THIS POLICY</span><ol>{sections.map((section,index)=><li key={section.id}><a href={'#'+section.id}><span>{String(index+1).padStart(2,'0')}</span>{section.title}</a></li>)}</ol></nav>}
     {type==='privacy'&&<p className="whatsapp-privacy-note">WhatsApp enquiries: the details you enter are prepared in your browser and shared with the hotel when you send the message in WhatsApp. The website does not require an account or process your payment. WhatsApp is an external service with its own privacy terms.</p>}<div className="policy-sections">{sections.map((section,index)=><section className="policy-section" id={section.id} key={section.id}><span className="policy-section-number" aria-hidden="true">{String(index+1).padStart(2,'0')}</span><div><h3>{section.title}</h3><p>{section.text}</p></div></section>)}</div>
-    {type==='cancellation'&&<section className="policy-reservation-help" aria-labelledby="policy-manage-title"><CalendarClock size={27}/><div><p className="policy-kicker">AN EXISTING RESERVATION</p><h3 id="policy-manage-title">Manage your booking</h3><p>Message the hotel on WhatsApp with your booking reference, guest name and requested change. The team will review the policy attached to your reservation and confirm the next steps.</p><div><a className="policy-action" href={whatsappUrl(manageMessage({action:'a cancellation or refund'}))} target="_blank" rel="noreferrer">Message the hotel <ArrowUpRight size={16}/></a><Link className="policy-action policy-action-outline" to="/manage">Reservation help <ArrowUpRight size={16}/></Link></div></div></section>}
+    {type==='cancellation'&&<section className="policy-reservation-help" aria-labelledby="policy-manage-title"><CalendarClock size={27}/><div><p className="policy-kicker">AN EXISTING RESERVATION</p><h3 id="policy-manage-title">Manage your booking</h3><p>Message the hotel on WhatsApp with your booking reference, guest name and requested change. The team will review the policy attached to your reservation and confirm the next steps.</p><div><a className="policy-action" href={whatsappUrl(manageMessage({action:'a booking cancellation or change'}))} target="_blank" rel="noreferrer">Message the hotel <ArrowUpRight size={16}/></a><Link className="policy-action policy-action-outline" to="/manage">Reservation help <ArrowUpRight size={16}/></Link></div></div></section>}
     <footer className="policy-document-footer"><span>ALSO USEFUL</span>{Object.entries(documents).filter(([key])=>key!==type).map(([key,value])=><Link to={'/policies/'+key} key={key}>{value.nav}<ArrowUpRight size={16}/></Link>)}</footer>
    </article>
   </div>
