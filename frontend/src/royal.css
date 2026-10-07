@@ -164,6 +164,19 @@ html[data-motion=reduced] .marquee-track{animation:none!important;transform:none
  .room-gallery-tile{min-height:230px}
 }
 
+
+/* SEO-supporting navigation and local discovery content */
+.breadcrumbs{display:flex;align-items:center;gap:10px;padding-top:26px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#b8a98f}
+.breadcrumbs a{color:#e3c997;text-decoration:none}
+.breadcrumbs a:hover{text-decoration:underline;text-underline-offset:4px}
+.seo-copy{max-width:920px}
+.seo-link-row{display:flex;flex-wrap:wrap;gap:18px 28px;margin-top:28px}
+.local-search-section .seo-link-row{margin-top:30px}
+@media(max-width:760px){
+ .breadcrumbs{padding-top:18px;gap:7px;font-size:9px;overflow-x:auto;white-space:nowrap}
+ .seo-link-row{flex-direction:column;align-items:flex-start;gap:14px}
+}
+
 /* Receipts remain legible on paper regardless of the active screen palette. */
 @media print{
  :root{--cream:#fff;--paper:#fff;--ink:#111;--muted:#333;--red:#333;--gold:#333;--line:#bbb;--surface-deep:#fff;--surface-raised:#fff}
