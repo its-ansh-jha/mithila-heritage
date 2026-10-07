@@ -21,7 +21,7 @@ All enquiries go to **+91 72958 07999** through `https://wa.me/917295807999`. Th
 - Contact and reservation-help forms prepare general, change, cancellation and refund messages.
 - A visible retry link is shown if the browser blocks the new WhatsApp window.
 
-The guest reviews the prefilled message and taps **Send** inside WhatsApp. Opening a link does not send a message, reserve inventory, charge money or confirm a stay. The hotel handles availability, payment arrangements, confirmation, changes and refunds in the conversation.
+The guest reviews the prefilled message and taps **Send** inside WhatsApp. Opening a link does not send a message, reserve inventory, charge money or confirm a stay. The hotel handles availability, payment arrangements, confirmation, cancellations and booking changes in the conversation. Completed payments are non-refundable.
 
 There is no guest or admin login. Old /account links redirect to /book; /admin redirects to the homepage. Firebase Authentication is no longer imported into the website. Account, admin, online-checkout and database-enquiry endpoints return HTTP 410 with the WhatsApp contact. Historical database records, secure legacy receipt APIs and payment webhooks remain intact; no customer records were deleted.
 
