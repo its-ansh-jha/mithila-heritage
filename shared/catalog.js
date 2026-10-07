@@ -189,7 +189,7 @@ export const initialSite = {
   }
 ]
 };
-export const money = (paise) => new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:2}).format(paise/100);
+export const money = (paise) => {const amount=paise/100;return new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',minimumFractionDigits:Number.isInteger(amount)?0:2,maximumFractionDigits:2}).format(amount);};
 export const roomOfferActive=(offer,now=Date.now())=>{
  if(!offer?.discountPercent)return false;
  const start=offer.validFrom?Date.parse(offer.validFrom+'T00:00:00+05:30'):0;
