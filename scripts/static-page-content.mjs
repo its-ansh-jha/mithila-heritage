@@ -51,7 +51,7 @@ function home(site){
   <p class="hero-kicker">MITHILA HERITAGE · PATNA</p><h1>The warmth <em>of Mithila.</em></h1>
   <p class="hero-intro">A room to return to. A rooftop to gather on. A warm welcome, in the heart of Patna.</p>
   <p>${link('/rooms','Explore our rooms')} · ${link('/contact','Find us in Patna')}</p></div>
-  <div class="hero-visual">${link('/rooms/'+site.rooms[0].id,'')}${pic(site.rooms[0].image,'Heritage Classic room at Mithila Heritage Patna',true)}</div></section>
+  <div class="hero-visual"><a class="hero-scene" href="/rooms/${esc(site.rooms[0].id)}" aria-label="View Heritage Classic room">${pic(site.rooms[0].image,'Heritage Classic room at Mithila Heritage Patna',true)}</a></div></section>
  <section class="section container story-section" id="welcome"><div class="story-copy">
   <h2>Come for a stay. Feel at home.</h2><p>${esc(site.story)}</p>
   <p>Whether you are visiting Patna with family, travelling on business or planning a celebration, our boutique hotel brings room accommodation, a rooftop restaurant and an event venue together in Jayprakash Nagar. The Ashiana–Kurji location offers a welcoming place to return to after a busy day.</p>
