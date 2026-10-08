@@ -9,6 +9,10 @@ export const initialSite = {
   checkIn: '12:00', checkOut: '11:00', restaurantOpen: '07:00', restaurantClose: '23:00',
   bookingEnabled: false, verified: false, taxPercent: 5,
   roomOffer:{discountPercent:20,validFrom:'2026-10-07',validThrough:'2026-11-15',label:'20% OFF till 15 November 2026'},
+  restaurantMenus:[
+    {name:'Restaurant Menu',label:'Full multi-cuisine menu',url:'https://drive.google.com/file/d/134ZPSJS-b-2aLNyBjiYRJnXBL7K-FAin/view'},
+    {name:'Café Menu',label:'Coffee, mocktails, snacks & café favourites',url:'https://drive.google.com/file/d/1t0qK8eCuXpXCLN-2fskQsA7WFlIenZNX/view'}
+  ],
   ...publishedPolicies,
   rooms: [
     {id:'heritage-classic',name:'Heritage Classic',eyebrow:'A RESTFUL RETREAT',image:'https://drive.google.com/thumbnail?id=1xoLsPM7eR5_OyLD0EtA5zL9O014LRNQK&sz=w1600',gallery:[{src:'https://drive.google.com/thumbnail?id=1KJ1VjZUiBaTfIYDe8YaZwEOLDIRG2ZJ0&sz=w1600',alt:'Heritage Classic bed and room interior'},{src:'https://drive.google.com/thumbnail?id=1LhOpLdOeCH9t9eoovOL4hnhXi3YdE5UZ&sz=w1600',alt:'Heritage Classic wide room view'},{src:'https://drive.google.com/thumbnail?id=1cQlo4g3tnMrQKZ944m7wby89eEcPlTOk&sz=w1600',alt:'Heritage Classic room from the entrance'},{src:'https://drive.google.com/thumbnail?id=1Mmivj5Qxbyk0B-Rak5Scny0GQ0ezCnJr&sz=w1600',alt:'Heritage Classic seating corner'},{src:'https://drive.google.com/thumbnail?id=13jwNV9IaSo81bv4AhGX3XTFt7KLU6z8K&sz=w1600',alt:'Private bathroom vanity'},{src:'https://drive.google.com/thumbnail?id=14jgddXGJhyRkikf5nPynQZfrlBOfkPyV&sz=w1600',alt:'Private bathroom'}],rate:3499,capacity:2,description:'A considered space to slow down. Soft tones, comfortable furnishings, and the little essentials for an easy stay in Patna.',amenities:publishedAmenities},
@@ -186,6 +190,121 @@ export const initialSite = {
     "src": "/images/IMG_3375.webp",
     "category": "Dining",
     "alt": "Open rooftop restaurant at Mithila Heritage"
+  },
+  {
+    "src": "/images/IMG_3357.webp",
+    "category": "Dining",
+    "alt": "Restaurant seating at Mithila Heritage"
+  },
+  {
+    "src": "/images/IMG_3482.webp",
+    "category": "Dining",
+    "alt": "Mithila Heritage restaurant dining hall"
+  },
+  {
+    "src": "/images/IMG_3522.webp",
+    "category": "Dining",
+    "alt": "Restaurant lounge seating at Mithila Heritage"
+  },
+  {
+    "src": "/images/IMG_3574.webp",
+    "category": "Dining",
+    "alt": "Wide view of the Mithila Heritage restaurant"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1kggUPkYENFuenavQRbEyKk8IKh_NnNEc&sz=w1600",
+    "category": "Dining",
+    "alt": "Beverage counter at Mithila Heritage restaurant"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1hDysgMUINL4sBMD3gq9FwAduh2YYP0kG&sz=w1600",
+    "category": "Dining",
+    "alt": "Rooftop café seating at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1RDIIFipO-vmny2APqBz0xh6Jz0TMTUia&sz=w1600",
+    "category": "Dining",
+    "alt": "Restaurant seating beside the floral wall at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=11uxBMVuDACkMqHuXCLBDTxZa3mlBb-f8&sz=w1600",
+    "category": "Dining",
+    "alt": "Elegant restaurant table seating at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1zseqO9OqGTsfqvNL_LCq2dVPtUWZ-fY4&sz=w1600",
+    "category": "Dining",
+    "alt": "Restaurant table setting detail at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=14d39jfh9wGPDbkQpvh8lRWwpV7W6Sn5R&sz=w1600",
+    "category": "Dining",
+    "alt": "Restaurant bar counter at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1t_plL_fDiqxkR0Hdi2dHVzDxGMa1zIb_&sz=w1600",
+    "category": "Celebrations",
+    "alt": "Celebration-ready restaurant setting at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1Pncnmy-vBCML7VAsM1d2vBe3JoGVCA_o&sz=w1600",
+    "category": "Celebrations",
+    "alt": "Buffet setup for events at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1QQJdkej1ycH6rabkfn5CS9QU5ZUF2Ha-&sz=w1600",
+    "category": "Spaces",
+    "alt": "Guest corridor at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=19AODof0gZYF5YGv1HaWB0UJRg_TYsB5q&sz=w1600",
+    "category": "Celebrations",
+    "alt": "Floral celebration backdrop at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1AY-GmIP1CYQ9VCzQCyB_wF6jMQedRDMy&sz=w1600",
+    "category": "Dining",
+    "alt": "Window-side restaurant seating at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1DLUFbTnN1ivDDks5ySmcYIjwp82q2m72&sz=w1600",
+    "category": "Dining",
+    "alt": "Rooftop café table at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1s5s_uUkBnFzBnFXerqaqwK2oqZhJ46-1&sz=w1600",
+    "category": "Dining",
+    "alt": "Restaurant beverage bar at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=115Rwe7ugvMllaWdePv1zvFxPP0wRpDH1&sz=w1600",
+    "category": "Dining",
+    "alt": "Restaurant tableware detail at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1v5ACQ9hPxLcNl98R_AObantQxApoYevp&sz=w1600",
+    "category": "Dining",
+    "alt": "Restaurant and bar interior at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1DURqhlqPt-VmMseSlOJfuu7p8ToLClSc&sz=w1600",
+    "category": "Dining",
+    "alt": "Rooftop café seating area at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1ndPJNwhl3BVLIBOLjwYs_Kc7Xistlnu2&sz=w1600",
+    "category": "Dining",
+    "alt": "Restaurant seating beside the bar at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1eGMyjd-9m7SGEAxMqE9jNFyVbb6m0nb4&sz=w1600",
+    "category": "Spaces",
+    "alt": "Hotel lounge seating by the window at Mithila Heritage"
+  },
+  {
+    "src": "https://drive.google.com/thumbnail?id=1iyXhYCRnW-NXp41IVKJvHcsbAg6ZnJcA&sz=w1600",
+    "category": "Dining",
+    "alt": "Wide view of the Mithila Heritage restaurant"
   }
 ]
 };
