@@ -2,6 +2,7 @@ import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import {initialSite} from '../shared/catalog.js';
 import {getSeo,buildSchemas,SITE_URL} from '../frontend/src/seo.js';
+import {renderStaticBody} from './static-page-content.mjs';
 
 const routes=[
  '/',
@@ -41,8 +42,20 @@ for(const route of routes){
  html=replaceTag(html,/<meta name="twitter:image"[^>]*>/i,`<meta name="twitter:image" content="${escape(image)}"/>`);
  const schema=`<script type="application/ld+json" id="seo-schema">${JSON.stringify(buildSchemas(route,initialSite,seo)).replaceAll('</script>','<\\/script>')}</script>`;
  html=replaceTag(html,/<script type="application\/ld\+json" id="seo-schema">[\s\S]*?<\/script>/i,schema);
+ const body=renderStaticBody(route,initialSite);
+ const h1Count=(body.match(/<h1(?:\s|>)/g)||[]).length;
+ const h2Count=(body.match(/<h2(?:\s|>)/g)||[]).length;
+ const linkCount=(body.match(/<a\s/g)||[]).length;
+ const textOnly=body.replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
+ const wordCount=textOnly.split(/\s+/).length;
+ if(h1Count!==1||h2Count<1||linkCount<8||wordCount<120){
+  throw new Error(`Incomplete SEO document for ${route}: H1=${h1Count}, H2=${h2Count}, links=${linkCount}, words=${wordCount}`);
+ }
+ if(route==='/'&&wordCount<250)throw new Error('Homepage prerender must contain at least 250 real words');
+ if(!html.includes('<div id="root"></div>'))throw new Error('Root mount point not found in built HTML');
+ html=html.replace('<div id="root"></div>',`<div id="root">${body}</div>`);
  const out=route==='/'?path.join(root,'dist','index.html'):path.join(root,'dist',route.slice(1),'index.html');
  await mkdir(path.dirname(out),{recursive:true});
  await writeFile(out,html);
 }
-console.log(`SEO route heads generated for ${routes.length} indexable routes.`);
+console.log(`SEO complete page HTML generated for ${routes.length} indexable routes.`);
