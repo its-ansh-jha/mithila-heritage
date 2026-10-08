@@ -64,7 +64,7 @@ export const seoKeywordClusters={
 
 const routeSeo={
  '/':{
-  title:'Hotel in Patna | Rooms, Rooftop Dining & Banquet | Mithila Heritage',
+  title:'Hotel in Patna | Mithila Heritage',
   description:'Mithila Heritage is a boutique hotel in Patna with comfortable rooms, rooftop dining, banquet spaces, free parking and warm hospitality in Jayprakash Nagar.',
   image:'/images/IMG_3446.webp',
   keywords:['hotel','local','brand']
