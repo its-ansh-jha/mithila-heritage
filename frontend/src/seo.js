@@ -236,6 +236,7 @@ export function buildSchemas(pathname,site,seo){
    servesCuisine:['Indian','Continental','Chinese'],
    telephone:site?.phone,
    openingHours:'Mo-Su 07:00-23:00',
+   hasMenu:(site?.restaurantMenus||[]).map(menu=>menu.url),
    address
   });
  }
