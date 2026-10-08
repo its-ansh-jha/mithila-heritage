@@ -8,7 +8,7 @@ export const initialSite = {
   story: 'In Patna’s Jayprakash Nagar, Mithila Heritage brings together four room categories, a rooftop restaurant, and a banquet hall. Comfortable rooms, round-the-clock room service, and a welcoming team make space for stays, meals, and celebrations.',
   checkIn: '12:00', checkOut: '11:00', restaurantOpen: '07:00', restaurantClose: '23:00',
   bookingEnabled: false, verified: false, taxPercent: 5,
-  roomOffer:{discountPercent:20,validFrom:'2026-10-07',validThrough:'2026-11-15',label:'20% OFF till 15 November 2026'},
+  roomOffer:{discountPercent:20,validFrom:'2026-10-07',validThrough:'2026-11-01',label:'20% OFF till 1 November 2026'},
   restaurantMenus:[
     {name:'Restaurant Menu',label:'Full multi-cuisine menu',url:'https://drive.google.com/file/d/134ZPSJS-b-2aLNyBjiYRJnXBL7K-FAin/view'},
     {name:'Café Menu',label:'Coffee, mocktails, snacks & café favourites',url:'https://drive.google.com/file/d/1t0qK8eCuXpXCLN-2fskQsA7WFlIenZNX/view'}
