@@ -3,7 +3,7 @@ export const roomTypes=['heritage-classic','heritage-deluxe','royal-premium','ma
 export const publishedAmenities=['Free Wi-Fi','Smart TV','Minibar','Tea & coffee maker','Safe deposit box','Queen bed','Modern bathroom','Essential toiletries','Workspace desk','Air conditioning','In-room dining'];
 export const initialSite = {
   name: 'Mithila Heritage', tagline: 'Rooted in culture. Crafted for you.',
-  phone: '+917295848999', secondaryPhone: '+917295807999', email: 'info@mithilaheritage.in',
+  phone: '+917295848999', secondaryPhone: '+917295807999', email: 'sales@mithilaheritage.in',
   address: 'B-2, Jayprakash Nagar, Ashiana Kurji Nala Road, Patna, Bihar 800025',
   story: 'In Patna’s Jayprakash Nagar, Mithila Heritage brings together four room categories, a rooftop restaurant, and a banquet hall. Comfortable rooms, round-the-clock room service, and a welcoming team make space for stays, meals, and celebrations.',
   checkIn: '12:00', checkOut: '11:00', restaurantOpen: '07:00', restaurantClose: '23:00',
