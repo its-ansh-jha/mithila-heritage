@@ -12,6 +12,7 @@ export async function site(db=pool){
  const currentRooms=new Map(initialSite.rooms.map(room=>[room.id,room]));
  return {
   ...stored,
+  email:initialSite.email,
   cancellationPolicy:initialSite.cancellationPolicy,
   taxPercent:initialSite.taxPercent,
   roomOffer:structuredClone(initialSite.roomOffer),
