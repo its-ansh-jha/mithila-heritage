@@ -26,7 +26,7 @@ export default function Home({site}){
     <div className="hero-photo-heading"><span><Lotus/>A CLOSER LOOK AT MITHILA</span><span>0{featured+1} / 04</span></div>
     <Link to={'/rooms/'+room.id} className="hero-scene"><img src={room.image} alt={room.name+' at Mithila Heritage'} width="1600" height="1067" fetchPriority="high"/><div className="scene-caption"><span>{room.name}<small className="hero-price-line">{promoActive&&<del>{money(room.rate*100)}</del>}<b>{money(featuredRate*100)}</b>{promoActive&&<span className="discount-chip">{site.roomOffer.discountPercent}% OFF</span>}<em>/ night + 5% GST</em></small></span><span className="hero-photo-arrow"><ArrowUpRight size={23}/></span></div></Link>
     <div className="hero-room-selector" role="group" aria-label="Preview a room">{site.rooms.map((r,i)=><button key={r.id} onClick={()=>{setFeatured(i);setCycleKey(k=>k+1);}} aria-pressed={featured===i} aria-label={'Preview '+r.name}><span>0{i+1}</span><span className="selector-line"/></button>)}</div>
-    <p className="hero-photo-note">FOUR ROOM CATEGORIES · ONE WARM WELCOME</p>
+    <p className="hero-photo-note">THREE ROOM CATEGORIES · ONE WARM WELCOME</p>
    </div>
   </section>
   <div className="container booking-container modern-booking"><QuickBook site={site}/></div>
@@ -36,7 +36,7 @@ export default function Home({site}){
    <div className="story-copy" data-scroll><div className="section-index">01 <span>THE WELCOME</span></div><Eyebrow>ONE HOTEL. A PERSONAL WELCOME.</Eyebrow><h2>Come for a stay.<br/><em>Feel at home.</em></h2><p>{site.story}</p><div className="story-facts"><span><Clock size={17}/>24/7 room service</span><span><UtensilsCrossed size={17}/>Rooftop restaurant</span></div><TextLink to="/about">Discover Mithila Heritage</TextLink></div>
   </section>
   <section className="section container stays-section">
-   <div className="section-heading" data-scroll><div><div className="section-index">02 <span>THE ROOMS</span></div><Eyebrow>FOUR WAYS TO MAKE YOURSELF AT HOME</Eyebrow><h2>A considered stay.<br/><em>In every detail.</em></h2></div><div className="section-aside"><p>Your quiet corner of Patna.<br/>Find the room that feels like you.</p><TextLink to="/rooms">Explore all four</TextLink></div></div>
+   <div className="section-heading" data-scroll><div><div className="section-index">02 <span>THE ROOMS</span></div><Eyebrow>THREE WAYS TO MAKE YOURSELF AT HOME</Eyebrow><h2>A considered stay.<br/><em>In every detail.</em></h2></div><div className="section-aside"><p>Your quiet corner of Patna.<br/>Find the room that feels like you.</p><TextLink to="/rooms">Explore all three</TextLink></div></div>
    <div className="rooms-grid">{site.rooms.map((r,i)=><RoomCard key={r.id} room={r} index={i} offer={site.roomOffer}/>)}</div>
   </section>
   <section className="cultural-pause" data-scroll><div className="pause-pattern" data-draw><MithilaFish/></div><p>The art of a<br/><em>warm welcome.</em></p><span>ATITHI DEVO BHAVA</span><div className="pause-pattern mirrored" data-draw><MithilaFish/></div></section>
@@ -63,7 +63,7 @@ export default function Home({site}){
    </div>
    <div>
     <details><summary>Where is Mithila Heritage located in Patna?</summary><p>Mithila Heritage is at B-2, Jayprakash Nagar, Ashiana Kurji Nala Road, Patna, Bihar 800025, convenient for guests searching for a hotel near Ashiana, Kurji and Jayprakash Nagar.</p></details>
-    <details><summary>What hotel rooms are available in Patna at Mithila Heritage?</summary><p>The hotel offers four room categories: Heritage Classic, Twin Bed / Heritage Deluxe, Royal Premium Deluxe and Maharaja Suite.</p></details>
+    <details><summary>What hotel rooms are available in Patna at Mithila Heritage?</summary><p>The hotel offers three room categories: Deluxe, Premium / Twin Bed and Suite.</p></details>
     <details><summary>Does Mithila Heritage have a rooftop restaurant in Patna?</summary><p>Yes. The rooftop restaurant serves Indian, Continental and Chinese cuisine and welcomes family dinners, quiet evenings and celebrations.</p></details>
     <details><summary>Can I book a banquet hall or wedding venue in Patna here?</summary><p>Yes. Mithila Heritage hosts weddings, engagements, birthdays, anniversaries, receptions and corporate gatherings with catering and event support.</p></details>
     <details><summary>Does the hotel offer parking and Wi-Fi?</summary><p>Guests have access to free parking and Wi-Fi, along with air-conditioned rooms, in-room dining and room service.</p></details>

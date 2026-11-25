@@ -16,10 +16,6 @@
       "destination": "/rooms/heritage-classic/index.html"
     },
     {
-      "source": "/rooms/heritage-deluxe",
-      "destination": "/rooms/heritage-deluxe/index.html"
-    },
-    {
       "source": "/rooms/royal-premium",
       "destination": "/rooms/royal-premium/index.html"
     },
@@ -81,7 +77,7 @@
     },
     {
       "source": "/heritage-deluxe-room.php",
-      "destination": "/rooms/heritage-deluxe",
+      "destination": "/rooms/royal-premium",
       "permanent": true
     },
     {
@@ -122,6 +118,11 @@
     {
       "source": "/reservation.php",
       "destination": "/book",
+      "permanent": true
+    },
+    {
+      "source": "/rooms/heritage-deluxe",
+      "destination": "/rooms/royal-premium",
       "permanent": true
     }
   ]

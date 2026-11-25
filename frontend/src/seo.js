@@ -71,7 +71,7 @@ const routeSeo={
  },
  '/rooms':{
   title:'Hotel Rooms & Suites in Patna | Mithila Heritage',
-  description:'Explore Heritage Classic, Twin Bed, Royal Premium and Maharaja Suite rooms at Mithila Heritage, Patna. Comfortable stays with Wi-Fi, parking and room service.',
+  description:'Explore Deluxe, Twin Bed, Royal Premium and Suite rooms at Mithila Heritage, Patna. Comfortable stays with Wi-Fi, parking and room service.',
   image:null,
   keywords:['rooms','hotel','local']
  },
@@ -110,10 +110,9 @@ const routeSeo={
 function roomSeo(room){
  const key=room?.id||'room';
  const names={
-  'heritage-classic':['Heritage Classic Room in Patna | Mithila Heritage','Book the Heritage Classic room at Mithila Heritage, Patna with comfortable interiors, Wi-Fi, room service and convenient access to Ashiana and Kurji.'],
-  'heritage-deluxe':['Twin Bed / Heritage Deluxe Room in Patna | Mithila Heritage','Explore the Twin Bed Heritage Deluxe room at Mithila Heritage, Patna for comfortable two-guest stays with Wi-Fi, room service and parking.'],
-  'royal-premium':['Royal Premium Room in Patna | Mithila Heritage','Stay in the Royal Premium Deluxe room at Mithila Heritage, Patna with spacious interiors, private bathroom, Wi-Fi, parking and room service.'],
-  'maharaja-suite':['Maharaja Suite in Patna | Mithila Heritage','Discover the Maharaja Suite at Mithila Heritage, Patna for a spacious premium stay with private bathroom, Wi-Fi, room service and parking.']
+  'heritage-classic':['Deluxe Room in Patna | Mithila Heritage','Book the Deluxe room at Mithila Heritage, Patna with comfortable interiors, Wi-Fi, room service and convenient access to Ashiana and Kurji.'],
+  'royal-premium':['Premium / Twin Bed Room in Patna | Mithila Heritage','Stay in the Premium / Twin Bed room at Mithila Heritage, Patna with spacious interiors, private bathroom, Wi-Fi, parking and room service.'],
+  'maharaja-suite':['Suite in Patna | Mithila Heritage','Discover the Suite at Mithila Heritage, Patna for a spacious premium stay with private bathroom, Wi-Fi, room service and parking.']
  };
  const [title,description]=names[key]||[room?.name+' in Patna | Mithila Heritage','Explore '+(room?.name||'our hotel room')+' at Mithila Heritage, Patna.'];
  return {title,description,image:room?.image,keywords:['rooms','hotel','local','brand']};
@@ -246,7 +245,7 @@ export function buildSchemas(pathname,site,seo){
    '@type':'FAQPage',
    mainEntity:[
     {'@type':'Question',name:'Where is Mithila Heritage located in Patna?',acceptedAnswer:{'@type':'Answer',text:'Mithila Heritage is at B-2, Jayprakash Nagar, Ashiana Kurji Nala Road, Patna, Bihar 800025.'}},
-    {'@type':'Question',name:'What hotel rooms are available at Mithila Heritage?',acceptedAnswer:{'@type':'Answer',text:'The hotel offers Heritage Classic, Twin Bed / Heritage Deluxe, Royal Premium Deluxe and Maharaja Suite room categories.'}},
+    {'@type':'Question',name:'What hotel rooms are available at Mithila Heritage?',acceptedAnswer:{'@type':'Answer',text:'The hotel offers Deluxe, Twin Bed / Heritage Deluxe, Premium / Twin Bed and Suite room categories.'}},
     {'@type':'Question',name:'Does Mithila Heritage have a rooftop restaurant in Patna?',acceptedAnswer:{'@type':'Answer',text:'Yes. The rooftop restaurant serves Indian, Continental and Chinese cuisine for family meals, evenings and celebrations.'}},
     {'@type':'Question',name:'Does Mithila Heritage have a banquet hall in Patna?',acceptedAnswer:{'@type':'Answer',text:'Yes. The banquet venue can be planned for weddings, engagements, birthdays, anniversaries, receptions and corporate gatherings.'}},
     {'@type':'Question',name:'Does Mithila Heritage offer parking and Wi-Fi?',acceptedAnswer:{'@type':'Answer',text:'The hotel offers free parking and Wi-Fi along with air-conditioned rooms, room service and in-room dining.'}}

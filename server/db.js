@@ -9,7 +9,6 @@ export async function site(db=pool){
  const {rows}=await db.query('SELECT data FROM site_settings WHERE id=1');
  const stored=rows[0]?.data;
  if(!stored)return structuredClone(initialSite);
- const currentRooms=new Map(initialSite.rooms.map(room=>[room.id,room]));
  return {
   ...stored,
   email:initialSite.email,
@@ -18,9 +17,10 @@ export async function site(db=pool){
   roomOffer:structuredClone(initialSite.roomOffer),
   restaurantMenus:structuredClone(initialSite.restaurantMenus),
   gallery:structuredClone(initialSite.gallery),
-  rooms:(stored.rooms||initialSite.rooms).map(room=>{
-   const current=currentRooms.get(room.id);
-   return current?{...room,image:current.image,gallery:structuredClone(current.gallery||[]),rate:current.rate}:room;
+  story:initialSite.story,
+  rooms:initialSite.rooms.map(current=>{
+   const room=stored.rooms?.find(r=>r.id===current.id);
+   return {...room,...current,gallery:structuredClone(current.gallery||[])};
   })
  };
 }

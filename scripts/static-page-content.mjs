@@ -57,7 +57,7 @@ function home(site){
   <p>Whether you are visiting Patna with family, travelling on business or planning a celebration, our boutique hotel brings room accommodation, a rooftop restaurant and an event venue together in Jayprakash Nagar. The Ashiana–Kurji location offers a welcoming place to return to after a busy day.</p>
   <p>Our hotel rooms include air conditioning, Wi-Fi and room service. Guests can also use complimentary parking. With a dedicated hotel team available for questions about room availability and bookings, your stay begins with a personal conversation.</p>
   ${link('/about','Discover Mithila Heritage')}</div></section>
- <section class="section container stays-section"><h2>Explore our hotel rooms in Patna</h2><p>Choose from four room categories designed for comfortable stays, from Heritage Classic and Heritage Deluxe to Royal Premium Deluxe and the Maharaja Suite.</p>
+ <section class="section container stays-section"><h2>Explore our hotel rooms in Patna</h2><p>Choose from three room categories designed for comfortable stays, from Deluxe to Premium / Twin Bed and Suite.</p>
  ${cards(site)}<p>${link('/rooms','Compare all hotel rooms and suites')}</p></section>
  <section class="section container dining-feature"><div class="dining-copy"><h2>Rooftop restaurant in Patna</h2>
  <p>Enjoy Indian, Continental and Chinese dishes with vegetarian and non-vegetarian choices. Mithila Heritage offers a rooftop setting for quiet evenings, family dinners, celebrations and time together.</p>
@@ -69,15 +69,15 @@ function home(site){
  <p>Looking for an event venue near Ashiana or Kurji? Explore our facilities and contact us to discuss dates, guest numbers, decoration and catering options.</p>
  ${link('/banquet','Explore banquet hall and celebrations')}</section>
  <section class="section container local-search-section"><h2>A comfortable Patna stay, with more under one roof</h2>
- <p>If you are comparing hotels in Patna, Mithila Heritage brings together four room categories, a rooftop restaurant and a banquet hall at one address. It is suited to family stays, business visits, celebrations and travellers seeking a boutique hotel in Jayprakash Nagar.</p>
+ <p>If you are comparing hotels in Patna, Mithila Heritage brings together three room categories, a rooftop restaurant and a banquet hall at one address. It is suited to family stays, business visits, celebrations and travellers seeking a boutique hotel in Jayprakash Nagar.</p>
  <p>You can explore the ${link('/rooms','hotel rooms in Patna')}, ${link('/restaurant','rooftop dining')}, ${link('/banquet','event venue')}, ${link('/gallery','real hotel photographs')} or ${link('/contact','contact and directions')} before getting in touch with the hotel team.</p>
  <h2>Questions before your visit</h2>${faqs.map(([q,a])=>`<article><h3>${esc(q)}</h3><p>${esc(a)}</p></article>`).join('')}</section>
  <section class="section container"><h2>Find Mithila Heritage in Patna</h2><p>${esc(site.address)}</p><p>Check-in from ${esc(site.checkIn)} · Check-out by ${esc(site.checkOut)}.</p>${link('/contact','Contact and directions')}</section>`;
  return shell(main,site);
 }
 function rooms(site){
- return shell(heading('ROOMS & SUITES','Hotel rooms in Patna','Explore four room categories, from classic hotel rooms and twin beds to premium accommodation and the Maharaja Suite.',site.rooms[2].image)+
- `<section class="section container"><h2>Four ways to stay. One Mithila welcome.</h2>
+ return shell(heading('ROOMS & SUITES','Hotel rooms in Patna','Explore three room categories, from Deluxe and Premium / Twin Bed rooms to the Suite.',site.rooms[2].image)+
+ `<section class="section container"><h2>Three ways to stay. One Mithila welcome.</h2>
  <p>Guests looking for hotel rooms in Patna can choose Heritage Classic, Heritage Deluxe, Royal Premium Deluxe and Maharaja Suite. Each category offers comfortable accommodation with amenities including air conditioning, Wi-Fi and room service.</p>
  <p>Find a room that suits your visit to the city. Mithila Heritage is located in Jayprakash Nagar on Ashiana Kurji Nala Road, close to the Ashiana and Kurji area of Patna.</p>
  ${cards(site)}<h2>Before you book</h2><p>Check-in starts at ${esc(site.checkIn)} and check-out is by ${esc(site.checkOut)}. Contact our team for early arrivals, late departures or the most up-to-date room availability.</p>
@@ -89,7 +89,7 @@ function roomPage(site,r){
  return shell(heading('HOTEL ROOM IN PATNA',r.name,r.name+' at Mithila Heritage in Jayprakash Nagar, Patna.',r.image)+
  `<nav class="container breadcrumbs" aria-label="Breadcrumb">${link('/','Home')} › ${link('/rooms','Rooms & Suites')} › ${esc(r.name)}</nav>
  <section class="section container detail-grid"><div><h2>A little space. All your own.</h2>
- <p>${esc(r.description)}</p><p>${esc(r.name)} is one of four room categories at Mithila Heritage, a boutique hotel in Patna on Ashiana Kurji Nala Road. Designed for guests visiting on business, with family or for a relaxing break, the room includes practical comforts for a convenient stay.</p>
+ <p>${esc(r.description)}</p><p>${esc(r.name)} is one of three room categories at Mithila Heritage, a boutique hotel in Patna on Ashiana Kurji Nala Road. Designed for guests visiting on business, with family or for a relaxing break, the room includes practical comforts for a convenient stay.</p>
  <h2>Room amenities</h2><ul>${features}</ul>
  <p>Each room category is supported by the hotel team. Guests can ask about availability, check-in and check-out options and any special requirements before arriving.</p>
  ${link('/rooms','Compare other rooms')}</div>

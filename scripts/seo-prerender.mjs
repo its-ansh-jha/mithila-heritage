@@ -8,7 +8,6 @@ const routes=[
  '/',
  '/rooms',
  '/rooms/heritage-classic',
- '/rooms/heritage-deluxe',
  '/rooms/royal-premium',
  '/rooms/maharaja-suite',
  '/restaurant',
