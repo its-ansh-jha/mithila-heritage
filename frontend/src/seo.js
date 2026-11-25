@@ -111,7 +111,7 @@ function roomSeo(room){
  const key=room?.id||'room';
  const names={
   'heritage-classic':['Deluxe Room in Patna | Mithila Heritage','Book the Deluxe room at Mithila Heritage, Patna with comfortable interiors, Wi-Fi, room service and convenient access to Ashiana and Kurji.'],
-  'royal-premium':['Premium / Twin Bed Room in Patna | Mithila Heritage','Stay in the Premium / Twin Bed room at Mithila Heritage, Patna with spacious interiors, private bathroom, Wi-Fi, parking and room service.'],
+  'royal-premium':['Premium Room in Patna | Mithila Heritage','Stay in the Premium room at Mithila Heritage, Patna with spacious interiors, private bathroom, Wi-Fi, parking and room service.'],
   'maharaja-suite':['Suite in Patna | Mithila Heritage','Discover the Suite at Mithila Heritage, Patna for a spacious premium stay with private bathroom, Wi-Fi, room service and parking.']
  };
  const [title,description]=names[key]||[room?.name+' in Patna | Mithila Heritage','Explore '+(room?.name||'our hotel room')+' at Mithila Heritage, Patna.'];
@@ -245,7 +245,7 @@ export function buildSchemas(pathname,site,seo){
    '@type':'FAQPage',
    mainEntity:[
     {'@type':'Question',name:'Where is Mithila Heritage located in Patna?',acceptedAnswer:{'@type':'Answer',text:'Mithila Heritage is at B-2, Jayprakash Nagar, Ashiana Kurji Nala Road, Patna, Bihar 800025.'}},
-    {'@type':'Question',name:'What hotel rooms are available at Mithila Heritage?',acceptedAnswer:{'@type':'Answer',text:'The hotel offers Deluxe, Twin Bed / Heritage Deluxe, Premium / Twin Bed and Suite room categories.'}},
+    {'@type':'Question',name:'What hotel rooms are available at Mithila Heritage?',acceptedAnswer:{'@type':'Answer',text:'The hotel offers Deluxe, Twin Bed / Heritage Deluxe, Premium and Suite room categories.'}},
     {'@type':'Question',name:'Does Mithila Heritage have a rooftop restaurant in Patna?',acceptedAnswer:{'@type':'Answer',text:'Yes. The rooftop restaurant serves Indian, Continental and Chinese cuisine for family meals, evenings and celebrations.'}},
     {'@type':'Question',name:'Does Mithila Heritage have a banquet hall in Patna?',acceptedAnswer:{'@type':'Answer',text:'Yes. The banquet venue can be planned for weddings, engagements, birthdays, anniversaries, receptions and corporate gatherings.'}},
     {'@type':'Question',name:'Does Mithila Heritage offer parking and Wi-Fi?',acceptedAnswer:{'@type':'Answer',text:'The hotel offers free parking and Wi-Fi along with air-conditioned rooms, room service and in-room dining.'}}
