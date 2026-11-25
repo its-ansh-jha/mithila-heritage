@@ -1,75 +1,74 @@
 import {publishedPolicies} from './policies.js';
-export const roomTypes=['heritage-classic','heritage-deluxe','royal-premium','maharaja-suite'];
+export const roomTypes=['heritage-classic','royal-premium','maharaja-suite'];
 export const publishedAmenities=['Free Wi-Fi','Smart TV','Minibar','Tea & coffee maker','Safe deposit box','Queen bed','Modern bathroom','Essential toiletries','Workspace desk','Air conditioning','In-room dining'];
 export const initialSite = {
   name: 'Mithila Heritage', tagline: 'Rooted in culture. Crafted for you.',
   phone: '+917295848999', secondaryPhone: '+917295807999', email: 'sales@mithilaheritage.in',
   address: 'B-2, Jayprakash Nagar, Ashiana Kurji Nala Road, Patna, Bihar 800025',
-  story: 'In Patna’s Jayprakash Nagar, Mithila Heritage brings together four room categories, a rooftop restaurant, and a banquet hall. Comfortable rooms, round-the-clock room service, and a welcoming team make space for stays, meals, and celebrations.',
+  story: 'In Patna’s Jayprakash Nagar, Mithila Heritage brings together three room categories, a rooftop restaurant, and a banquet hall. Comfortable rooms, round-the-clock room service, and a welcoming team make space for stays, meals, and celebrations.',
   checkIn: '12:00', checkOut: '11:00', restaurantOpen: '07:00', restaurantClose: '23:00',
   bookingEnabled: false, verified: false, taxPercent: 5,
-  roomOffer:{discountPercent:20,validFrom:'2026-10-07',validThrough:'2026-11-01',label:'20% OFF till 1 November 2026'},
+  roomOffer:{discountPercent:0,validFrom:'',validThrough:'',label:''},
   restaurantMenus:[
     {name:'Restaurant Menu',label:'Full multi-cuisine menu',url:'https://drive.google.com/file/d/134ZPSJS-b-2aLNyBjiYRJnXBL7K-FAin/view'},
     {name:'Café Menu',label:'Coffee, mocktails, snacks & café favourites',url:'https://drive.google.com/file/d/1t0qK8eCuXpXCLN-2fskQsA7WFlIenZNX/view'}
   ],
   ...publishedPolicies,
   rooms: [
-    {id:'heritage-classic',name:'Heritage Classic',eyebrow:'A RESTFUL RETREAT',image:'/images/drive/1xoLsPM7eR5_OyLD0EtA5zL9O014LRNQK.jpg',gallery:[{src:'/images/drive/1KJ1VjZUiBaTfIYDe8YaZwEOLDIRG2ZJ0.jpg',alt:'Heritage Classic bed and room interior'},{src:'/images/drive/1LhOpLdOeCH9t9eoovOL4hnhXi3YdE5UZ.jpg',alt:'Heritage Classic wide room view'},{src:'/images/drive/1cQlo4g3tnMrQKZ944m7wby89eEcPlTOk.jpg',alt:'Heritage Classic room from the entrance'},{src:'/images/drive/1Mmivj5Qxbyk0B-Rak5Scny0GQ0ezCnJr.jpg',alt:'Heritage Classic seating corner'},{src:'/images/drive/13jwNV9IaSo81bv4AhGX3XTFt7KLU6z8K.jpg',alt:'Private bathroom vanity'},{src:'/images/drive/14jgddXGJhyRkikf5nPynQZfrlBOfkPyV.jpg',alt:'Private bathroom'}],rate:3499,capacity:2,description:'A considered space to slow down. Soft tones, comfortable furnishings, and the little essentials for an easy stay in Patna.',amenities:publishedAmenities},
-    {id:'heritage-deluxe',name:'Heritage Deluxe',eyebrow:'ROOM TO UNWIND',image:'/images/drive/1lh44DuI2N20xfQIMjb5VB73vGHXJxoZj.jpg',gallery:[{src:'/images/drive/1qbmmtH6tiEZdW-G9OSSFPaSEssrAz-bG.jpg',alt:'Twin bed room with both beds in view'},{src:'/images/drive/1NxkC12TKgITSwsFe_kURmY4jgs5Mmy0Q.jpg',alt:'Twin bed room front view'},{src:'/images/drive/1w5Cy8K3pZb-uBAdp8-VxzLrB2ROcMWHX.jpg',alt:'Twin bed room television and seating area'},{src:'/images/drive/18o1XRzNKqrzoyxeB-DglBNhEdxXlTuw5.jpg',alt:'Twin bed room seating and television wall'},{src:'/images/drive/13jwNV9IaSo81bv4AhGX3XTFt7KLU6z8K.jpg',alt:'Private bathroom vanity'},{src:'/images/drive/14jgddXGJhyRkikf5nPynQZfrlBOfkPyV.jpg',alt:'Private bathroom'}],rate:4499,capacity:2,description:'Settle into an inviting room with a little more space to make your own. An easy choice for unhurried mornings and restful evenings.',amenities:publishedAmenities},
-    {id:'royal-premium',name:'Royal Premium Deluxe',eyebrow:'AN ELEVATED EVERYDAY',image:'/images/drive/19h2LEVn8T3F5dj4mm489ViAxnQYHsXuI.jpg',gallery:[{src:'/images/drive/1us4Ua3vYQrbnjIeWmy5pTkVQIo5sjG5i.jpg',alt:'Royal Premium room wide view with sofa'},{src:'/images/drive/1C4l63t2LRKon-PAWht39zn1T40bnyzg2.jpg',alt:'Royal Premium bed and lounge area'},{src:'/images/drive/1P980-3gMgHpV2bgyORKuydDroDHtQbQ3.jpg',alt:'Royal Premium room television and wardrobe view'},{src:'/images/drive/1VuLwXjiOUGHhs4qQo789R-IPn81zG_Vm.jpg',alt:'Royal Premium room wide interior'},{src:'/images/drive/13jwNV9IaSo81bv4AhGX3XTFt7KLU6z8K.jpg',alt:'Private bathroom vanity'},{src:'/images/drive/14jgddXGJhyRkikf5nPynQZfrlBOfkPyV.jpg',alt:'Private bathroom'}],rate:5499,capacity:2,description:'Warm interiors and thoughtful comfort come together in our premium retreat. A welcoming base for exploring the city or simply staying in.',amenities:publishedAmenities},
-    {id:'maharaja-suite',name:'Maharaja Suite',eyebrow:'STAY A LITTLE GRANDER',image:'/images/drive/1PpCCfj8PovyTFlm-mafyVqb82I9Usz9R.jpg',gallery:[{src:'/images/drive/1WwNK4ltCCdQpRiDshiAxIELD0rg_DNYh.jpg',alt:'Maharaja Suite spacious room view'},{src:'/images/drive/18GYav3TOzxxGiaR7LHe6lQvm5ZaXnBTc.jpg',alt:'Maharaja Suite bed and television view'},{src:'/images/drive/1GOg1FyejlVFF53v8QlVWAFAcxM2xgcHf.jpg',alt:'Maharaja Suite private sitting area'},{src:'/images/drive/1J4ilN5gOzhXKWSRAe6_6Egk8tdsjHiSE.jpg',alt:'Maharaja Suite bed front view'},{src:'/images/drive/13jwNV9IaSo81bv4AhGX3XTFt7KLU6z8K.jpg',alt:'Private bathroom vanity'},{src:'/images/drive/14jgddXGJhyRkikf5nPynQZfrlBOfkPyV.jpg',alt:'Private bathroom'}],rate:6499,capacity:2,description:'Our signature suite invites you to take your time. A generous, comfortable setting for special stays and moments worth lingering over.',amenities:publishedAmenities}
+    {id:'heritage-classic',name:'Deluxe Room',eyebrow:'A RESTFUL RETREAT',image:'/images/drive/1xoLsPM7eR5_OyLD0EtA5zL9O014LRNQK.jpg',gallery:[{src:'/images/drive/1KJ1VjZUiBaTfIYDe8YaZwEOLDIRG2ZJ0.jpg',alt:'Heritage Classic bed and room interior'},{src:'/images/drive/1LhOpLdOeCH9t9eoovOL4hnhXi3YdE5UZ.jpg',alt:'Heritage Classic wide room view'},{src:'/images/drive/1cQlo4g3tnMrQKZ944m7wby89eEcPlTOk.jpg',alt:'Heritage Classic room from the entrance'},{src:'/images/drive/1Mmivj5Qxbyk0B-Rak5Scny0GQ0ezCnJr.jpg',alt:'Heritage Classic seating corner'},{src:'/images/drive/13jwNV9IaSo81bv4AhGX3XTFt7KLU6z8K.jpg',alt:'Private bathroom vanity'},{src:'/images/drive/14jgddXGJhyRkikf5nPynQZfrlBOfkPyV.jpg',alt:'Private bathroom'}],rate:2500,capacity:2,description:'A considered space to slow down. Soft tones, comfortable furnishings, and the little essentials for an easy stay in Patna.',amenities:publishedAmenities},
+    {id:'royal-premium',name:'Premium / Twin Bed Room',eyebrow:'AN ELEVATED EVERYDAY',image:'/images/drive/19h2LEVn8T3F5dj4mm489ViAxnQYHsXuI.jpg',gallery:[{src:'/images/drive/1qbmmtH6tiEZdW-G9OSSFPaSEssrAz-bG.jpg',alt:'Twin bed room with both beds in view'},{src:'/images/drive/1NxkC12TKgITSwsFe_kURmY4jgs5Mmy0Q.jpg',alt:'Twin bed room front view'},{src:'/images/drive/1w5Cy8K3pZb-uBAdp8-VxzLrB2ROcMWHX.jpg',alt:'Twin bed room television and seating area'},{src:'/images/drive/18o1XRzNKqrzoyxeB-DglBNhEdxXlTuw5.jpg',alt:'Twin bed room seating and television wall'},{src:'/images/drive/1us4Ua3vYQrbnjIeWmy5pTkVQIo5sjG5i.jpg',alt:'Royal Premium room wide view with sofa'},{src:'/images/drive/1C4l63t2LRKon-PAWht39zn1T40bnyzg2.jpg',alt:'Royal Premium bed and lounge area'},{src:'/images/drive/1P980-3gMgHpV2bgyORKuydDroDHtQbQ3.jpg',alt:'Royal Premium room television and wardrobe view'},{src:'/images/drive/1VuLwXjiOUGHhs4qQo789R-IPn81zG_Vm.jpg',alt:'Royal Premium room wide interior'},{src:'/images/drive/13jwNV9IaSo81bv4AhGX3XTFt7KLU6z8K.jpg',alt:'Private bathroom vanity'},{src:'/images/drive/14jgddXGJhyRkikf5nPynQZfrlBOfkPyV.jpg',alt:'Private bathroom'}],rate:3000,capacity:2,description:'Warm interiors and thoughtful comfort come together in our premium retreat. A welcoming base for exploring the city or simply staying in.',amenities:publishedAmenities},
+    {id:'maharaja-suite',name:'Suite Room',eyebrow:'STAY A LITTLE GRANDER',image:'/images/drive/1PpCCfj8PovyTFlm-mafyVqb82I9Usz9R.jpg',gallery:[{src:'/images/drive/1WwNK4ltCCdQpRiDshiAxIELD0rg_DNYh.jpg',alt:'Maharaja Suite spacious room view'},{src:'/images/drive/18GYav3TOzxxGiaR7LHe6lQvm5ZaXnBTc.jpg',alt:'Maharaja Suite bed and television view'},{src:'/images/drive/1GOg1FyejlVFF53v8QlVWAFAcxM2xgcHf.jpg',alt:'Maharaja Suite private sitting area'},{src:'/images/drive/1J4ilN5gOzhXKWSRAe6_6Egk8tdsjHiSE.jpg',alt:'Maharaja Suite bed front view'},{src:'/images/drive/13jwNV9IaSo81bv4AhGX3XTFt7KLU6z8K.jpg',alt:'Private bathroom vanity'},{src:'/images/drive/14jgddXGJhyRkikf5nPynQZfrlBOfkPyV.jpg',alt:'Private bathroom'}],rate:3500,capacity:2,description:'Our signature suite invites you to take your time. A generous, comfortable setting for special stays and moments worth lingering over.',amenities:publishedAmenities}
   ],
   gallery:[
   {
     "src": "/images/drive/1KJ1VjZUiBaTfIYDe8YaZwEOLDIRG2ZJ0.jpg",
     "category": "Rooms",
-    "alt": "Heritage Classic guest room"
+    "alt": "Deluxe guest room"
   },
   {
     "src": "/images/drive/1cQlo4g3tnMrQKZ944m7wby89eEcPlTOk.jpg",
     "category": "Rooms",
-    "alt": "Heritage Classic guest room"
+    "alt": "Deluxe guest room"
   },
   {
     "src": "/images/drive/1LhOpLdOeCH9t9eoovOL4hnhXi3YdE5UZ.jpg",
     "category": "Rooms",
-    "alt": "Heritage Classic guest room"
+    "alt": "Deluxe guest room"
   },
   {
     "src": "/images/drive/1xoLsPM7eR5_OyLD0EtA5zL9O014LRNQK.jpg",
     "category": "Rooms",
-    "alt": "Heritage Classic guest room"
+    "alt": "Deluxe guest room"
   },
   {
     "src": "/images/drive/1Mmivj5Qxbyk0B-Rak5Scny0GQ0ezCnJr.jpg",
     "category": "Rooms",
-    "alt": "Heritage Classic guest room"
+    "alt": "Deluxe guest room"
   },
   {
     "src": "/images/drive/1w5Cy8K3pZb-uBAdp8-VxzLrB2ROcMWHX.jpg",
     "category": "Rooms",
-    "alt": "Heritage Deluxe double-bed guest room"
+    "alt": "Premium twin-bed guest room"
   },
   {
     "src": "/images/drive/18o1XRzNKqrzoyxeB-DglBNhEdxXlTuw5.jpg",
     "category": "Rooms",
-    "alt": "Heritage Deluxe double-bed guest room"
+    "alt": "Premium twin-bed guest room"
   },
   {
     "src": "/images/drive/1NxkC12TKgITSwsFe_kURmY4jgs5Mmy0Q.jpg",
     "category": "Rooms",
-    "alt": "Heritage Deluxe double-bed guest room"
+    "alt": "Premium twin-bed guest room"
   },
   {
     "src": "/images/drive/1qbmmtH6tiEZdW-G9OSSFPaSEssrAz-bG.jpg",
     "category": "Rooms",
-    "alt": "Heritage Deluxe double-bed guest room"
+    "alt": "Premium twin-bed guest room"
   },
   {
     "src": "/images/drive/1lh44DuI2N20xfQIMjb5VB73vGHXJxoZj.jpg",
     "category": "Rooms",
-    "alt": "Heritage Deluxe double-bed guest room"
+    "alt": "Premium twin-bed guest room"
   },
   {
     "src": "/images/drive/14jgddXGJhyRkikf5nPynQZfrlBOfkPyV.jpg",
