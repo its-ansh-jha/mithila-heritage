@@ -63,7 +63,7 @@ export default function Home({site}){
    </div>
    <div>
     <details><summary>Where is Mithila Heritage located in Patna?</summary><p>Mithila Heritage is at B-2, Jayprakash Nagar, Ashiana Kurji Nala Road, Patna, Bihar 800025, convenient for guests searching for a hotel near Ashiana, Kurji and Jayprakash Nagar.</p></details>
-    <details><summary>What hotel rooms are available in Patna at Mithila Heritage?</summary><p>The hotel offers three room categories: Deluxe, Premium / Twin Bed and Suite.</p></details>
+    <details><summary>What hotel rooms are available in Patna at Mithila Heritage?</summary><p>The hotel offers three room categories: Deluxe, Premium and Suite.</p></details>
     <details><summary>Does Mithila Heritage have a rooftop restaurant in Patna?</summary><p>Yes. The rooftop restaurant serves Indian, Continental and Chinese cuisine and welcomes family dinners, quiet evenings and celebrations.</p></details>
     <details><summary>Can I book a banquet hall or wedding venue in Patna here?</summary><p>Yes. Mithila Heritage hosts weddings, engagements, birthdays, anniversaries, receptions and corporate gatherings with catering and event support.</p></details>
     <details><summary>Does the hotel offer parking and Wi-Fi?</summary><p>Guests have access to free parking and Wi-Fi, along with air-conditioned rooms, in-room dining and room service.</p></details>
